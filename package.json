@@ -1,0 +1,26 @@
+{
+  "name": "clubbr",
+  "version": "0.0.1",
+  "description": "Finding a club to find friends",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timothyk7/clubbr.git"
+  },
+  "author": "Timothy Kua",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timothyk7/clubbr/issues"
+  },
+  "homepage": "https://github.com/timothyk7/clubbr#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
