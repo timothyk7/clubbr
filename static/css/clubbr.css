@@ -1,0 +1,21 @@
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+body { 
+	padding-top: 70px; 
+}
+
+.profile-thumbnail {
+	height: 45px;
+	width: 45px;
+	border-radius: 50%;
+}
+
+.right-padding {
+	padding-right: 5px;
+}
