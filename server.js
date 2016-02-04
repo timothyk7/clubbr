@@ -8,6 +8,8 @@ var hbs = require('hbs');
 
 
 var index = require('./routes/index');
+var signup = require('./routes/signup');
+var home = require('./routes/home');
 var orgs = require('./routes/orgs');
 var match_me = require('./routes/match_me');
 var profile = require('./routes/profile');
@@ -32,6 +34,8 @@ app.listen(port, function() {
 });
 
 app.get('/', index.view);
+app.get('/signup', signup.view);
+app.get('/home', home.view);
 app.get('/orgs', orgs.view);
 app.get('/match_me', match_me.view);
 app.get('/profile', profile.view);

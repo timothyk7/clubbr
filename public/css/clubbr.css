@@ -19,3 +19,13 @@ body {
 .right-padding {
 	padding-right: 5px;
 }
+
+#createProfileForm{
+	margin: 25px;
+}
+
+#submitBtn{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
