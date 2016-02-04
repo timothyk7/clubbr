@@ -10,6 +10,7 @@ var hbs = require('hbs');
 var index = require('./routes/index');
 var orgs = require('./routes/orgs');
 var match_me = require('./routes/match_me');
+var profile = require('./routes/profile');
 
 // Create the server instance
 var app = express();
@@ -33,3 +34,4 @@ app.listen(port, function() {
 app.get('/', index.view);
 app.get('/orgs', orgs.view);
 app.get('/match_me', match_me.view);
+app.get('/profile', profile.view);
