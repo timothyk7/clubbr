@@ -23,7 +23,7 @@ function noClick(e) {
 
     $("#club-title").text("Bicycling Club");
  	$("#club-description").text("We like bicycling, Bicycling is our passion");
-	$("#club-img").attr('src', 'http://www.balloons.com.au/Images/LargeImages/peppa_pig_bike_lrg.JPG');
+	$("#club-img").attr('src', 'http://lorempixel.com/400/400/food/');
 	
 }
 
