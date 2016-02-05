@@ -8,8 +8,9 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/clubbr.css" rel="stylesheet">
-	<script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/new_profile.js"></script>
 	<!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -24,15 +25,53 @@
 	<div class="container-fluid">
 		<form id="createProfileForm" role="form" method="get" action="/home">
 			<h3>Profile</h3>
+			<div class="form-group">
+				<span><img class="profile-pic" src="/images/wendy.jpeg"></span>
+				<span class="btn btn-default btn-file">
+    				Browse <input type="file">
+				</span>
+			</div>
 		    <div class="form-group">
-		      <label for="name">Name:</label>
-		      <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+		      <label class="control-label" for="name">Name:</label>
+		      <input class="form-control" type="text" id="name" placeholder="Name" name="name">
 		    </div>
 		    <div class="form-group">
-		      <label for="description">Description:</label>
-		      <textarea class="form-control" rows="3" id="description" name="description"></textarea>
+	              <label class="col-md-2 control-label" for="Checkboxes">Add Interest:</label>  
+
+	              <div class="col-md-10 columns" id="checkBoxInterests"> 
+	                    <label class="checkbox-inline" for="Checkboxes_Pad">
+	                      <input type="checkbox" name="Checkboxes" id="Checkboxes_Pad" value="Pad">
+	                      Pad
+	                    </label> 
+	                    <label class="checkbox-inline" for="Checkboxes_Pole_Dancing">
+	                      <input type="checkbox" name="Checkboxes" id="Checkboxes_Pole_Dancing" value="Pole Dancing">
+	                      Pole Dancing
+	                    </label> 
+	                    <label class="checkbox-inline" for="Checkboxes_Tennis">
+	                      <input type="checkbox" name="Checkboxes" id="Checkboxes_Tennis" value="Tennis">
+	                      Tennis
+	                    </label>
+	                    <label class="checkbox-inline" for="Checkboxes_Cycling">
+	                      <input type="checkbox" name="Checkboxes" id="Checkboxes_Cycling" value="Cycling">
+	                      Cycling
+	                    </label> 
+	                    <label class="checkbox-inline" for="Checkboxes_League">
+	                      <input type="checkbox" name="Checkboxes" id="Checkboxes_League" value="Leage of Legend">
+	                      Leage of Legend
+	                    </label> 
+	                    <label class="checkbox-inline" for="Checkboxes_Kayaking">
+	                      <input type="checkbox" name="Checkboxes" id="Checkboxes_Kayaking" value="Kayaking">
+	                      Kayaking
+	                    </label> 
+	                </div>
 		    </div>
-		    <input type="submit" id="submitBtn" class="btn btn-default" value="Create Profile"></input>
+		    <div class="form-group">
+		    	<span>
+		    		<input class="form-group" type="text" id="interest" placeholder="Interest" name="interest">
+		    		<button class="btn btn-primary" id="addInterest" >Add Interest</button> 
+		    	</span>
+		    </div>
+		    <input type="submit" id="submitBtn" class="btn btn-default" value="Create Profile" disabled></input>
 		</form>
 	</div>
 </body>
