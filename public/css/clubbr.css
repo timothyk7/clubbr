@@ -81,3 +81,20 @@ label.checkbox-inline.checked {
   vertical-align: top;
   width: 30%;
 }
+
+.club-container {
+    width: 50%;
+    margin: 0 auto; 
+    text-align: center;
+}
+
+.club-buttons {
+    position: fixed;
+    padding: 5px;
+}
+
+#club-img {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}

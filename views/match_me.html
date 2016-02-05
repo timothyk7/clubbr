@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = yes, maximum-scale=1.0">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="css/listOfOrgs.css" rel="stylesheet">
+	<link href="css/clubbr.css" rel="stylesheet">
     <script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<!-- this is a comment in HTML -->
@@ -25,26 +25,44 @@
 <!-- 	basic fixed navigation bar -->
     <nav class="navbar navbar-default navbar-fixed-top">
 	    <div class="container-fluid">
-	      <!-- the name/logo for the site, links to home page	 -->
-				<div class =".col-xs-12 .col-md-4>
-					<div class="navbar-header">
-						<div class =".col-xs-12">
-							<a class="navbar-brand" href="/home">Clubbr</a>
-						</div> 
-					</div>
+			<div class="navbar-header col-xs-12 ">
+				<!-- the name/logo for the site, links to home page	 -->
+				<a class="navbar-brand" href="/home">Clubbr</a>
 
-					  <span class="navbar-right pull-right">
-						<!-- shows your username and profile pic -->
+				<div class="navbar-right pull-right">
+					<!-- shows your username and profile pic -->
+					<p class="navbar-text navbar-right right-padding">
+						Signed in as <a href="/profile" class="navbar-link">Wendy Tang</a>
+						<a href="/profile" class="navbar-link"><img src="images/wendy.jpeg" class="profile-thumbnail"></img></a
+					</p>
+				</div>
+			</div> 
 
-						<p class="navbar-text navbar-right right-padding">
-							Signed in as <a href="#" class="navbar-link">Wendy Tang</a>
-							<a href="#" class="navbar-link"><img src="images/wendy.jpeg" class="profile-thumbnail"></img></a>
 
-						</p>
-					  </span>
+
 				
+
 		</div>
 	</nav>
+
+	<!-- 	Meat of Match Me -->
+	<div class="club-container">
+		<h2 id="club-title">Recycling Club</h2>
+		<img class="img-responsive img-rounded" id="club-img" src="http://lorempixel.com/500/500/people/"></img>
+
+		<h3 id="club-description"> We like to recycle, recycling is our passion</h3>
+		<div class="col-xs-4">
+			<button id="yes-btn" class="club-buttons btn btn-primary btn-lg ">Yes!</button>
+		</div>
+
+		<div class="col-xs-8">
+		   	<button id="no-btn" class="club-buttons btn btn-primary btn-lg ">No!</button>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.js"></script>
+	<script src="/js/match_game.js"></script>
 
 </body>
 </html>
