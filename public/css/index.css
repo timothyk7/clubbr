@@ -1,0 +1,16 @@
+body {
+	background-image: url("../images/oasis.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+html {
+	min-height: 100%;
+}
+
+.index-buttons {
+    width: 50%;
+    margin: 0 auto; 
+    text-align: center;
+    padding-top: 300px;
+}
