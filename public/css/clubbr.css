@@ -10,9 +10,6 @@
 	padding: 70px;
 }
 
-.index-body{
-  
-}
 .profile-thumbnail {
 	height: 45px;
 	width: 45px;
@@ -93,13 +90,17 @@ label.checkbox-inline.checked {
 }
 
 .club-buttons {
-    position: fixed;
     padding: 5px;
 }
 
 #club-img {
-  /*width: 400px;*/
-  /*height: 400px;*/
+  width: 275px;
+  height: 275px;
   margin-left: auto;
   margin-right: auto;
+  overflow: auto;
+}
+
+.match-buttons {
+  padding-left: 25px;
 }
