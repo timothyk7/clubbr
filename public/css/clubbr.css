@@ -95,7 +95,7 @@ label.checkbox-inline.checked {
 
 #club-img {
   width: 275px;
-  height: 275px;
+  height: 250px;
   margin-left: auto;
   margin-right: auto;
   overflow: auto;
@@ -103,4 +103,9 @@ label.checkbox-inline.checked {
 
 .match-buttons {
   padding-left: 25px;
+}
+
+.
+.learn-more {
+  padding-top: 35px;
 }
