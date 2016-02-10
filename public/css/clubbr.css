@@ -109,3 +109,11 @@ label.checkbox-inline.checked {
 .learn-more {
   padding-top: 35px;
 }
+
+.search_bar{
+    margin-right: auto;
+    text-align: center;
+    padding-top: 25px;
+    width: 24px;
+    height: 20px;
+}
