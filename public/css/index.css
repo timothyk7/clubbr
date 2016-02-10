@@ -8,6 +8,13 @@ html {
 	min-height: 100%;
 }
 
+
+.user_password {
+    width: 50%;
+    margin: 0 auto; 
+    text-align: center;
+}
+
 .index-buttons {
     width: 50%;
     margin: 0 auto; 
