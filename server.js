@@ -3,8 +3,10 @@ var PORT = 3000;
 // Express is a web framework for node.js
 // that makes nontrivial applications easier to build
 var express = require('express');
+var http = require('http');
 var path = require('path');
 var hbs = require('hbs');
+var handlebars = require('express3-handlebars')
 
 
 var index = require('./routes/index');
@@ -18,8 +20,12 @@ var profile = require('./routes/profile');
 var app = express();
 
 // view engine setup
-app.set('view engine', 'html');
-app.engine('html', require('hbs').__express);
+// app.set('view engine', 'html');
+// app.engine('html', require('hbs').__express);
+app.set('views', path.join(__dirname, 'views'));
+app.engine('handlebars', handlebars());
+app.set('view engine', 'handlebars');
+
 
 // Return all pages in the /static directory
 // whenever they are requested at '/'
