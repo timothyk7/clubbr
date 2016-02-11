@@ -130,19 +130,18 @@ label.checkbox-inline.checked {
   width: 30px;
 }
 
-.profile_picture {
-  width: 150px;
-  height: 150px;
+.profile-picture {
+  width: 125px;
+  height: 125px;
 }
 
-#profile_leftcol {
-  padding-top: 125px;
+#profile-leftcol {
+  padding-top: 100px;
+  float: left;
+
 }
 
-#profile_rightcol {
-
-    width: 400px;
-    text-align: center;
+#profile-rightcol {
 
     /* Move it to the right */
     float: right;
