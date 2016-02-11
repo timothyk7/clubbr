@@ -109,3 +109,43 @@ label.checkbox-inline.checked {
 .learn-more {
   padding-top: 35px;
 }
+
+.search-container {
+    margin-right: 200px;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.search_bar{
+    margin: 0 auto;
+    width: 24px;
+    height: 20px;
+}
+
+.search_input{
+  width: 200px;
+}
+
+.search_button {
+  width: 30px;
+}
+
+.profile-picture {
+  width: 125px;
+  height: 125px;
+}
+
+#profile-leftcol {
+  padding-top: 100px;
+  float: left;
+
+}
+
+#profile-rightcol {
+
+    /* Move it to the right */
+    float: right;
+
+    /* For visibility. Delete me */
+    border: 1px solid blue;
+}
