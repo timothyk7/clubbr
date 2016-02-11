@@ -1,0 +1,34 @@
+{
+	"interests": [
+		{
+			"id": 0, 
+			"interest": "Pad",
+			"remove_space": "Pad"
+		},
+		{
+			"id": 1, 
+			"interest": "Pole Dancing",
+			"remove_space": "Pole_Dancing"
+		},
+		{
+			"id": 2, 
+			"interest": "Tennis",
+			"remove_space": "Tennis"
+		},
+		{
+			"id": 3, 
+			"interest": "Cycling",
+			"remove_space": "Cycling"
+		},
+		{
+			"id": 4, 
+			"interest": "League of Legends",
+			"remove_space": "League_of_Legends"
+		},
+		{
+			"id": 5, 
+			"interest": "Kayaking",
+			"remove_space": "Kayaking"
+		}
+	]
+}

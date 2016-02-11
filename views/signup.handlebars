@@ -2,16 +2,16 @@
 
 <html>
 <head>
-	<title>Clubbr</title>	
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = yes, maximum-scale=1.0">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="css/clubbr.css" rel="stylesheet">
+    <title>Clubbr</title>   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = yes, maximum-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/signup.css" rel="stylesheet">
     <script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/new_profile.js"></script>
-	<!-- this is a comment in HTML -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/signup.js"></script>
+    <!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,61 +22,101 @@
 </head>
 
 <body>
-	<div class="container-fluid">
-		<form id="createProfileForm" role="form" method="get" action="/home">
-			<h3>Creating Profile</h3>
-			<div class="form-group">
-				<span><img class="profile-pic" src="/images/wendy.jpeg"></span>
-				<span class="btn btn-default btn-file">
-    				Browse <input type="file">
-				</span>
-			</div>
-		    <div class="form-group">
-		      <label class="control-label" for="name">Name:</label>
-		      <input class="form-control" type="text" id="name" placeholder="Name" name="name">
-		    </div>
-		    <div class="form-group">
-		      <label class="control-label" for="password">Password:</label>
-		      <input class="form-control" type="password" id="password" placeholder="Password" name="password">
-		    </div>
-		    <div class="form-group">
-	              <label class="col-md-2 control-label" for="Checkboxes">Add Interest:</label>  
+<!--    <div class="container-fluid">
+        <form id="createProfileForm" role="form" method="get" action="/home">
+            <h3>Creating Profile</h3>
+            <div class="form-group">
+                <span><img class="profile-pic" src="/images/wendy.jpeg"></span>
+                <span class="btn btn-default btn-file">
+                    Browse <input type="file">
+                </span>
+            </div>
+            <div class="form-group">
+              <label class="control-label" for="name">Name:</label>
+              <input class="form-control" type="text" id="name" placeholder="Name" name="name">
+            </div>
+            <div class="form-group">
+              <label class="control-label" for="password">Password:</label>
+              <input class="form-control" type="password" id="password" placeholder="Password" name="password">
+            </div>
+            <div class="form-group">
+                  <label class="col-md-2 control-label" for="Checkboxes">Add Interest:</label>  
 
-	              <div class="col-md-10 columns" id="checkBoxInterests"> 
-	                    <label class="checkbox-inline" for="Checkboxes_Pad">
-	                      <input type="checkbox" name="Checkboxes" id="Checkboxes_Pad" value="Pad">
-	                      Pad
-	                    </label> 
-	                    <label class="checkbox-inline" for="Checkboxes_Pole_Dancing">
-	                      <input type="checkbox" name="Checkboxes" id="Checkboxes_Pole_Dancing" value="Pole Dancing">
-	                      Pole Dancing
-	                    </label> 
-	                    <label class="checkbox-inline" for="Checkboxes_Tennis">
-	                      <input type="checkbox" name="Checkboxes" id="Checkboxes_Tennis" value="Tennis">
-	                      Tennis
-	                    </label>
-	                    <label class="checkbox-inline" for="Checkboxes_Cycling">
-	                      <input type="checkbox" name="Checkboxes" id="Checkboxes_Cycling" value="Cycling">
-	                      Cycling
-	                    </label> 
-	                    <label class="checkbox-inline" for="Checkboxes_League">
-	                      <input type="checkbox" name="Checkboxes" id="Checkboxes_League" value="Leage of Legend">
-	                      League of Legend
-	                    </label> 
-	                    <label class="checkbox-inline" for="Checkboxes_Kayaking">
-	                      <input type="checkbox" name="Checkboxes" id="Checkboxes_Kayaking" value="Kayaking">
-	                      Kayaking
-	                    </label> 
-	                </div>
-		    </div>
-		    <div class="form-group">
-		    	<span>
-		    		<input class="form-group" type="text" id="interest" placeholder="Interest" name="interest">
-		    		<button class="btn btn-primary" id="addInterest" >Add Interest</button> 
-		    	</span>
-		    </div>
-		    <input type="submit" id="submitBtn" class="btn btn-default" value="Create Profile" disabled></input>
-		</form>
-	</div>
+                  <div class="col-md-10 columns" id="checkBoxInterests"> 
+                        <label class="checkbox-inline" for="Checkboxes_Pad">
+                          <input type="checkbox" name="Checkboxes" id="Checkboxes_Pad" value="Pad">
+                          Pad
+                        </label> 
+                        <label class="checkbox-inline" for="Checkboxes_Pole_Dancing">
+                          <input type="checkbox" name="Checkboxes" id="Checkboxes_Pole_Dancing" value="Pole Dancing">
+                          Pole Dancing
+                        </label> 
+                        <label class="checkbox-inline" for="Checkboxes_Tennis">
+                          <input type="checkbox" name="Checkboxes" id="Checkboxes_Tennis" value="Tennis">
+                          Tennis
+                        </label>
+                        <label class="checkbox-inline" for="Checkboxes_Cycling">
+                          <input type="checkbox" name="Checkboxes" id="Checkboxes_Cycling" value="Cycling">
+                          Cycling
+                        </label> 
+                        <label class="checkbox-inline" for="Checkboxes_League">
+                          <input type="checkbox" name="Checkboxes" id="Checkboxes_League" value="Leage of Legend">
+                          League of Legend
+                        </label> 
+                        <label class="checkbox-inline" for="Checkboxes_Kayaking">
+                          <input type="checkbox" name="Checkboxes" id="Checkboxes_Kayaking" value="Kayaking">
+                          Kayaking
+                        </label> 
+                    </div>
+            </div>
+            <div class="form-group">
+                <span>
+                    <input class="form-group" type="text" id="interest" placeholder="Interest" name="interest">
+                    <button class="btn btn-primary" id="addInterest" >Add Interest</button> 
+                </span>
+            </div>
+            <input type="submit" id="submitBtn" class="btn btn-default" value="Create Profile" disabled></input>
+        </form>
+    </div> -->
+    <div class="container-fluid">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 profileBlock">
+            <div class="content clearfix">
+                <h1 class="center">Create Profile</h1>
+                    <div id="userphoto" class="center form-group">
+                        <img src="/images/avatar.png" alt="default avatar">
+                        <span class="btn btn-default btn-file">
+                            Browse <input type="file">
+                        </span>
+                    </div>
+                    <div>
+                      <label class="control-label" for="name">Name:</label>
+                      <input class="form-control" type="text" id="name" placeholder="Name" name="name">
+                    </div>
+                    <div >
+                      <label class="control-label" for="email">Email:</label>
+                      <input class="form-control" type="text" id="email" placeholder="Email" name="email">
+                    </div>
+                    <div>
+                      <label class="control-label" for="password">Password:</label>
+                      <input class="form-control" type="password" id="password" placeholder="Password" name="password">
+                    </div>
+                    <div>
+                        <label class="control-label" for="Checkboxes">Select Interest(s):</label>  
+                        <div id="interest" class="row">
+                            {{#each interests}}
+                            <div class="col-md-6 columns center" id="checkBoxInterests"> 
+                                    <label class="checkbox-inline" for="{{remove_space}}">
+                                    <input type="checkbox" name="Checkboxes" id="{{remove_space}}" value="{{interest}}">
+                                        {{interest}}
+                                    </label> 
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    <button id="submitBtn" class="btn btn-default center">Create Profile</button>
+                </form>
+            </div><!-- @end #content -->
+          </div><!-- @end #w -->
+    </div>
 </body>
 </html>
