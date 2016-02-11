@@ -83,14 +83,25 @@ label.checkbox-inline.checked {
 }
 
 .club-container {
-    width: 50%;
-    margin: 0 auto; 
-    text-align: center;
-    padding-top: 60px;
+  width: 50%;
+  margin: 0 auto; 
+  text-align: center;
+  padding-top: 60px;
 }
 
 .club-buttons {
-    padding: 5px;
+  padding: 5px;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  padding: 20px;
+  width: 100%;
+}
+
+.mid-align {
+  text-align: center;
 }
 
 #club-img {
@@ -149,3 +160,4 @@ label.checkbox-inline.checked {
     /* For visibility. Delete me */
     border: 1px solid blue;
 }
+

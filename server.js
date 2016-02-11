@@ -44,4 +44,5 @@ app.get('/signup', signup.view);
 app.get('/home', home.view);
 app.get('/orgs', orgs.view);
 app.get('/match_me', match_me.view);
+app.get('/:id', orgs.clubInfo);
 app.get('/profile', profile.view);

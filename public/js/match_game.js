@@ -1,5 +1,7 @@
 'use strict';
 
+var clubCounter = 1;
+
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
@@ -15,22 +17,40 @@ function initializePage() {
 	// example: $("#div-id").click(functionToCall);
 	$("#no-btn").click(noClick);
 	$("#yes-btn").click(yesClick);
+	$("#go-to-profile-btn").click(goToProfile);
+	$("#keep-matching-btn").click(noClick);
 }
 
 function noClick(e) {
     console.log("No clicked");
     e.preventDefault();	
 
-    $("#club-title").text("Bicycling Club");
- 	$("#club-description").text("We like bicycling, Bicycling is our passion");
-	$("#club-img").attr('src', 'http://www.balloons.com.au/Images/LargeImages/peppa_pig_bike_lrg.JPG');
-	
+    var idNumber = clubCounter % 6;
+    clubCounter++;
+    $.get("/"+idNumber, getNextClub);	
+    $('#yes-modal').modal('hide')
+}
+
+function getNextClub(result) {
+	console.log(result)
+
+	$("#club-title").text(result['name']);
+ 	$("#club-description").text(result['description']);
+	$("#club-img").attr('src', result['imageURL']);
 }
 
 function yesClick(e) {
     console.log("Yes clicked");
     e.preventDefault();	
 
-	$("#club-description").text("Added to interests!");
+	$('#yes-modal').modal();
 	
+}
+
+function goToProfile(e) {
+	// Prevent following the link
+	e.preventDefault();
+
+	window.location.href = '/profile';
+
 }

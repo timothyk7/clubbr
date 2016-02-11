@@ -55,16 +55,39 @@
 
 			</div>
 
-<!-- 			<div class="match-buttons"> -->
-				<div class="col-xs-6">
-					<button id="yes-btn" class="club-buttons btn btn-primary btn-lg ">Yes!</button>
-				</div>
-
-				<div class="col-xs-6">
-				   	<button id="no-btn" class="club-buttons btn btn-primary btn-lg ">No!</button>
-				</div>
-<!-- 			</div> -->
 		</div>
 	</div>
+
+
+	<!-- yes/no buttons -->
+	<div class="footer">
+		<div class="col-xs-6 mid-align">
+			<button id="yes-btn" class="club-buttons btn btn-primary btn-lg ">Yes!</button>
+		</div>
+
+		<div class="col-xs-6 mid-align">
+		   	<button id="no-btn" class="club-buttons btn btn-primary btn-lg ">No!</button>
+		</div>
+	</div>
+
+	<!-- Modal Popup-->
+	<div class="modal fade" id="yes-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Added to your interests!</h4>
+	      </div>
+	      <div class="modal-body">
+	        Keep making matches or go check your profile?
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" id="go-to-profile-btn" data-dismiss="modal">Go to profile</button>
+	        <button type="button" class="btn btn-primary" id="keep-matching-btn">Keep matching!</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 </body>
 </html>
