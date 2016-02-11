@@ -17,6 +17,8 @@ function initializePage() {
 	// example: $("#div-id").click(functionToCall);
 	$("#no-btn").click(noClick);
 	$("#yes-btn").click(yesClick);
+	$("#go-to-profile-btn").click(goToProfile);
+	$("#keep-matching-btn").click(noClick);
 }
 
 function noClick(e) {
@@ -26,6 +28,7 @@ function noClick(e) {
     var idNumber = clubCounter % 6;
     clubCounter++;
     $.get("/"+idNumber, getNextClub);	
+    $('#yes-modal').modal('hide')
 }
 
 function getNextClub(result) {
@@ -40,6 +43,14 @@ function yesClick(e) {
     console.log("Yes clicked");
     e.preventDefault();	
 
-	$("#club-description").text("Added to interests!");
+	$('#yes-modal').modal();
 	
+}
+
+function goToProfile(e) {
+	// Prevent following the link
+	e.preventDefault();
+
+	window.location.href = '/profile';
+
 }
