@@ -110,10 +110,43 @@ label.checkbox-inline.checked {
   padding-top: 35px;
 }
 
-.search_bar{
-    margin-right: auto;
+.search-container {
+    margin-right: 200px;
     text-align: center;
-    padding-top: 25px;
+    padding-top: 80px;
+}
+
+.search_bar{
+    margin: 0 auto;
     width: 24px;
     height: 20px;
+}
+
+.search_input{
+  width: 200px;
+}
+
+.search_button {
+  width: 30px;
+}
+
+.profile_picture {
+  width: 150px;
+  height: 150px;
+}
+
+#profile_leftcol {
+  padding-top: 125px;
+}
+
+#profile_rightcol {
+
+    width: 400px;
+    text-align: center;
+
+    /* Move it to the right */
+    float: right;
+
+    /* For visibility. Delete me */
+    border: 1px solid blue;
 }
