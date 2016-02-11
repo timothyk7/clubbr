@@ -1,31 +1,43 @@
 {
 	"clubs": [
 		{
+			"id": 0, 
+			"clubID": "composting-club",
 			"name": "Composting Club",
 			"description": "Composting is cool",
 			"imageURL": "http://www.sandiegocounty.gov/content/dam/sdc/dpw/SOLID_WASTE_PLANNING_and_RECYCLING/Files/compostinghands.jpg"			
 		},
 		{
+			"id": 1, 
+			"clubID": "cycling-club",
 			"name": "Cycling Club",
 			"description": "We like bicycling, bicycling is our passion",
 			"imageURL": "http://www.balloons.com.au/Images/LargeImages/peppa_pig_bike_lrg.JPG"			
 		},
 		{
-			"name": "Reusable Tote Bag Club",
+			"id": 2, 
+			"clubID": "reusable-tote-bag-crusaders",
+			"name": "Reusable Tote Bag Crusaders",
 			"description": "Stop wastin plastic!!",
 			"imageURL": "http://cdn.coolmompicks.com/wp-content/uploads/2014/11/Oh-Kale-Yeah-reusable-grocery-tote-bag.jpg"			
 		},
 		{
+			"id": 3, 
+			"clubID": "save-the-bees",
 			"name": "Save the Bees",
 			"description": "We love bees more than people",
 			"imageURL": "http://www.clownsonrounds.com/wp-content/uploads/2015/03/bee-cartoon.png"			
 		},
 		{
+			"id": 4, 
+			"clubID": "extreme-knitting-club",
 			"name": "Extreme Knitting Club",
 			"description": "We're an extremely tight-knit family!",
 			"imageURL": "http://paveseattle.org/wp-content/uploads/2015/08/KnittingBasket.jpg"
 		},
 		{
+			"id": 5, 
+			"clubID": "tubbs-fanclub",
 			"name": "Tubbs Fanclub",
 			"description": "Finicky Feaster",
 			"imageURL": "https://pbs.twimg.com/media/CT_HQpdWcAEn2C0.jpg"
