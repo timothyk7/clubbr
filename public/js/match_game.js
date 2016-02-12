@@ -20,6 +20,8 @@ function initializePage() {
 	$("#yes-modal-back-to-matching-btn").click(noClick);
 	$("#upcoming-events-back-to-matching-btn").click(noClick);
 	$("#show-me-btn").click(showEventList);
+	$("#go-to-profile-btn").click(goToProfile);
+	$("#start-again-btn").click(noClick);
 }
 
 /*
@@ -30,11 +32,16 @@ function noClick(e) {
     e.preventDefault();	
 
     clubCounter++;
-    clubCounter = clubCounter % 6;
-    var idNumber = clubCounter;
 
-    // get the club with id of idNumber
-    $.get("/"+idNumber, getNextClub);
+    // reached end of clubs list
+    if(clubCounter >= 6) {
+    	$("#no-more-modal").modal();
+    	clubCounter = -1;
+    }
+    else {
+    	// get the club with id of idNumber
+    	$.get("/"+clubCounter, getNextClub);
+    }
 }
 
 
@@ -102,4 +109,8 @@ function getEventList(result) {
 
 	// insert the html in the modal body
 	$('#upcoming-events-modal-body').html(eventHtml);
+}
+
+function goToProfile(e) {
+	window.location.href = '/profile';
 }
