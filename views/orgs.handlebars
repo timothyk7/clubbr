@@ -7,7 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = yes, maximum-scale=1.0">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="css/clubbr.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/clubbr.css">
+	<link href="css/orgs.css" rel="stylesheet">
     <script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<!-- this is a comment in HTML -->
@@ -40,28 +41,23 @@
 		</div> 
 	</nav>
 
-	<div class="container-fluid search-container">
-		<div class="search_bar">
-			<form>
-			     <table class ="search_table">
-				 <tr>
-	            	<td><input type="text" placeholder="Search For Clubs" class ="search_input"></td>
-					<td><input type="image" img src="images/searchbutton3.jpg" class="search_button"></td>
-				</tr>
-			</table>
-			</form>
-		</div>
-	</div>
-
-
-	<div class="container-fluid categories-orgs">
-		<br>
-		<div class="categories">
-
-			<a href="/example" class="example"> <p> category 1 </p> </a>
-			<a href="/example" class="example"> <p> category 2 </p> </a>
-			<a href="/example" class="example"> <p> category 3 </p> </a>
-			<a href="/example" class="example"> <p> category 4 </p> </a>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="search-container col-xs-8 col-xs-offset-2 col-sm-9 col-sm-offset-2 col-md-10 col-md-offset-1">
+		        <form class="navbar-form" role="search">
+			        <div class="input-group">
+			            <input type="text" class="form-control" placeholder="Search" name="search" id="search">
+			            <div class="input-group-btn">
+			                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+			            </div>
+			        </div>
+		        </form>
+	        </div>
+	        <div class="list-group col-xs-8 col-xs-offset-2 col-sm-9 col-sm-offset-2 col-md-10 col-md-offset-1">
+			  {{#each clubs}}
+			  	<a href="#" class="list-group-item">{{name}}</a>
+			  {{/each}}
+			</div>
 		</div>
 	</div>
 

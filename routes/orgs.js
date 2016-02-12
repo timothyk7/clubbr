@@ -1,7 +1,7 @@
 var clubs = require('../clubs.json');
 
 exports.view = function(req, res){
-	res.render('orgs');
+	res.render('orgs', clubs);
 }
 
 exports.clubInfo = function(req, res) {
