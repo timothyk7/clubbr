@@ -107,14 +107,16 @@
   padding-top: 100px;
   float: left;
 
+
 }
 
 #profile-rightcol {
 
     /* Move it to the right */
+    text-align: center;
     float: right;
-
+    padding-top: 200px;
+    padding-left: 100px;
     /* For visibility. Delete me */
-    border: 1px solid blue;
 }
 
