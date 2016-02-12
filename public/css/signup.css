@@ -9,6 +9,11 @@ body {
   display: block;
 }
 
+.space{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .profileBlock {
   display: block;
   padding-top: 30px;

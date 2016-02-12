@@ -16,7 +16,18 @@ $(document).ready(function() {
         else
         	alert('Incomplete profile, please fillout highlighted parts');
     });
-
+	$('#saveChanges').on('click', function(){
+		var checkboxes = $("#checkBoxInterestsModal input[type='checkbox']");
+		var selected = false;
+		for (var i=0; i<checkboxes.length; i++)  {
+	  		if (checkboxes[i].type == 'checkbox' && checkboxes[i].checked ) {
+	  			selected = true;
+	  		}
+		}
+		// if(selected){
+		// 	alert("Added to interest");
+		// }
+	});
 })
 
 /*
