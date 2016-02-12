@@ -103,15 +103,12 @@
   height: 125px;
 }
 
-#profile-leftcol {
+.profile-leftcol {
   padding-top: 100px;
   float: left;
-
-
 }
 
 #profile-rightcol {
-
     /* Move it to the right */
     text-align: center;
     float: right;
@@ -120,3 +117,10 @@
     /* For visibility. Delete me */
 }
 
+#profile-name{
+  font-size: 200%;
+}
+
+#profile-email{
+  font-size: 200%;
+}
