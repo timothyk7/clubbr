@@ -22,62 +22,6 @@
 </head>
 
 <body>
-<!--    <div class="container-fluid">
-        <form id="createProfileForm" role="form" method="get" action="/home">
-            <h3>Creating Profile</h3>
-            <div class="form-group">
-                <span><img class="profile-pic" src="/images/wendy.jpeg"></span>
-                <span class="btn btn-default btn-file">
-                    Browse <input type="file">
-                </span>
-            </div>
-            <div class="form-group">
-              <label class="control-label" for="name">Name:</label>
-              <input class="form-control" type="text" id="name" placeholder="Name" name="name">
-            </div>
-            <div class="form-group">
-              <label class="control-label" for="password">Password:</label>
-              <input class="form-control" type="password" id="password" placeholder="Password" name="password">
-            </div>
-            <div class="form-group">
-                  <label class="col-md-2 control-label" for="Checkboxes">Add Interest:</label>  
-
-                  <div class="col-md-10 columns" id="checkBoxInterests"> 
-                        <label class="checkbox-inline" for="Checkboxes_Pad">
-                          <input type="checkbox" name="Checkboxes" id="Checkboxes_Pad" value="Pad">
-                          Pad
-                        </label> 
-                        <label class="checkbox-inline" for="Checkboxes_Pole_Dancing">
-                          <input type="checkbox" name="Checkboxes" id="Checkboxes_Pole_Dancing" value="Pole Dancing">
-                          Pole Dancing
-                        </label> 
-                        <label class="checkbox-inline" for="Checkboxes_Tennis">
-                          <input type="checkbox" name="Checkboxes" id="Checkboxes_Tennis" value="Tennis">
-                          Tennis
-                        </label>
-                        <label class="checkbox-inline" for="Checkboxes_Cycling">
-                          <input type="checkbox" name="Checkboxes" id="Checkboxes_Cycling" value="Cycling">
-                          Cycling
-                        </label> 
-                        <label class="checkbox-inline" for="Checkboxes_League">
-                          <input type="checkbox" name="Checkboxes" id="Checkboxes_League" value="Leage of Legend">
-                          League of Legend
-                        </label> 
-                        <label class="checkbox-inline" for="Checkboxes_Kayaking">
-                          <input type="checkbox" name="Checkboxes" id="Checkboxes_Kayaking" value="Kayaking">
-                          Kayaking
-                        </label> 
-                    </div>
-            </div>
-            <div class="form-group">
-                <span>
-                    <input class="form-group" type="text" id="interest" placeholder="Interest" name="interest">
-                    <button class="btn btn-primary" id="addInterest" >Add Interest</button> 
-                </span>
-            </div>
-            <input type="submit" id="submitBtn" class="btn btn-default" value="Create Profile" disabled></input>
-        </form>
-    </div> -->
     <div class="container-fluid">
         <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 profileBlock">
             <div class="content clearfix">
@@ -113,7 +57,40 @@
                             {{/each}}
                         </div>
                     </div>
-                    <button id="submitBtn" class="btn btn-default center">Create Profile</button>
+                    <div>
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-default center space" data-toggle="modal" data-target="#myModal">
+                        See More
+                      </button>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title" id="myModalLabel">Interests</h4>
+                            </div>
+                            <div class="modal-body">
+                              <div id="interest" class="row">
+                                {{#each extra_interests}}
+                                <div class="col-md-6 columns center" id="checkBoxInterestsModal"> 
+                                        <label class="checkbox-inline" for="{{remove_space}}">
+                                        <input type="checkbox" name="Checkboxes" id="{{remove_space}}" value="{{interest}}">
+                                            {{interest}}
+                                        </label> 
+                                </div>
+                                {{/each}}
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button id="saveChanges" type="button" class="btn btn-primary" data-dismiss="modal">Add to Interest</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button id="submitBtn" class="btn btn-default center space">Create Profile</button>
                 </form>
             </div><!-- @end #content -->
           </div><!-- @end #w -->

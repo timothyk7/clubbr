@@ -2,18 +2,18 @@
 	"interests": [
 		{
 			"id": 0, 
-			"interest": "Pad",
-			"remove_space": "Pad"
+			"interest": "Honey Gathering",
+			"remove_space": "Honey_Gathering"
 		},
 		{
 			"id": 1, 
-			"interest": "Pole Dancing",
-			"remove_space": "Pole_Dancing"
+			"interest": "Composting",
+			"remove_space": "Composting"
 		},
 		{
 			"id": 2, 
-			"interest": "Tennis",
-			"remove_space": "Tennis"
+			"interest": "Gardening",
+			"remove_space": "Gardening"
 		},
 		{
 			"id": 3, 
@@ -22,13 +22,25 @@
 		},
 		{
 			"id": 4, 
-			"interest": "League of Legends",
-			"remove_space": "League_of_Legends"
+			"interest": "Sewing",
+			"remove_space": "Sewing"
 		},
 		{
 			"id": 5, 
-			"interest": "Kayaking",
-			"remove_space": "Kayaking"
+			"interest": "Knitting",
+			"remove_space": "Knitting"
+		}
+	],
+	"extra_interests":[
+		{
+			"id": 6, 
+			"interest": "Pets",
+			"remove_space": "Pets"
+		},
+		{
+			"id": 7, 
+			"interest": "Shopping",
+			"remove_space": "Shopping"
 		}
 	]
 }
