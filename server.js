@@ -15,6 +15,7 @@ var home = require('./routes/home');
 var orgs = require('./routes/orgs');
 var match_me = require('./routes/match_me');
 var profile = require('./routes/profile');
+var clubprofile = require('./routes/clubprofile');
 
 // Create the server instance
 var app = express();
@@ -45,5 +46,7 @@ app.get('/home', home.view);
 app.get('/orgs', orgs.view);
 app.get('/match_me', match_me.view);
 app.get('/profile', profile.view);
-app.get('/:id', orgs.clubInfo);
+// app.get('/clubprofile/:id', clubprofile.view);
+app.get('/clubprofile', clubprofile.view);
+app.get('/match_me/:id', orgs.clubInfo); //change
 
