@@ -34,6 +34,7 @@ function initializePage() {
 /*
  * Listener for when you click the no button
  */
+ // commento
 function noClick(e) {
     console.log("No clicked");
     e.preventDefault();	
