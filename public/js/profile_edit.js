@@ -45,10 +45,12 @@ function editNameHelper(){
 	console.log("editNameHelper");
 	var example = $('#new-name').val();
 
-	if(example != null){
+	if(example){
 		example.fonts
 		$('#profile-name').text(example);
 		$('#name-modal').modal("hide");
+	} else {
+		$('#name-modal').parents('p').addClass('warning')
 	}
 }
 
@@ -62,10 +64,11 @@ function editEmailHelper(){
 	console.log("editEmailHelper");
 	var example = $('#new-email').val();
 
-	if(example != null){
-		example.fonts
+	if($('#new-email').val()){
 		$('#profile-email').text(example);
 		$('#email-modal').modal("hide");
+	} else {
+		$('#email-modal').parents('p').addClass('warning')
 	}
 
 }
