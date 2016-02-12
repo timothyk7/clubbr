@@ -10,6 +10,7 @@
 	<link href="css/clubbr.css" rel="stylesheet">
     <script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="/js/profile_edit.js"></script>
 	<!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -21,43 +22,101 @@
 </head>
 
 <body>
+	<div class="row">
+	<!-- 	basic fixed navigation bar -->
+	    <nav class="navbar navbar-default navbar-fixed-top">
+				<div class="navbar-header col-xs-12 ">
+					<!-- the name/logo for the site, links to home page	 -->
+					<a class="navbar-brand" href="/home">Clubbr</a>
 
-<!-- 	basic fixed navigation bar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-	    <div class="container-fluid">
-			<div class="navbar-header col-xs-12 ">
-				<!-- the name/logo for the site, links to home page	 -->
-				<a class="navbar-brand" href="/home">Clubbr</a>
-
-				<div class="navbar-right pull-right">
-					<!-- shows your username and profile pic -->
-					<p class="navbar-text navbar-right right-padding">
-						Signed in as <a href="/profile" class="navbar-link">Wendy Tang</a>
-						<a href="/profile" class="navbar-link"><img src="images/wendy.jpeg" class="profile-thumbnail"></img></a>
-					</p>
-				</div>
-			</div> 
-		</div>
-	</nav>
+					<div class="navbar-right pull-right">
+						<!-- shows your username and profile pic -->
+						<p class="navbar-text navbar-right right-padding">
+							Signed in as <a href="/profile" class="navbar-link">Wendy Tang</a>
+							<a href="/profile" class="navbar-link"><img src="images/wendy.jpeg" class="profile-thumbnail"></img></a>
+						</p>
+					</div>
+				</div> 
+		</nav>
+	</div>
 
 
 	<div class="container-fluid profile-container">
 
-		<div id="profile-leftcol">
-			<div class=" profile-information">
-				<h3>Username</h3>
-				<img src="images/wendy.jpeg" class="profile-picture">
-			</div>
-		</div>
+		<!--profile picture and stuff -->
+		<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 profileBlock">
+	        <div class="content clearfix">
+	            <h1 class="center">Create Profile</h1>
+	                <div id="userphoto" class="center form-group">
+	                    <img src="/images/wendy.jpeg" class = "profile-pic">
+	                </div>
+	                <div>
 
-		<div id="profile-rightcol">
-			<div class="profile-interests col-xs-6">
-					<p> Interests </p>
-					<h4> Kayaking</h4>
-			</div>
-		</div>
+	                	<!--<label class="control-label" for="name"> <h2>Wendy Tang</h2></label> -->
+	                	<div id ="profile-name">Wendy Tang </div>
+	                	<button class="btn btn-primary" id="editName">Edit Name</button>
+	     	            <div id ="profile-email">example.ucsd.edu </div>
+	                	<button class="btn btn-primary" id="editEmail" >Edit email</button>
+	                </div>
 
+	                <div>
+	                    <label class="control-label" for="Checkboxes">Interest(s):</label> 
+	                    	<!-- making a simple list that have interests --> 
+							 <ul id ='profile-interests' class ="profile-interests" style="list-style-type:none">
+							  <li>Composting</li>
+							  <li>Bicycling</li>
+							  <li>Reusing</li>
+							</ul> 
+	                </div>
+	            </form>
+	        </div><!-- @end #content -->
+	      </div><!-- @end #w -->
+
+	        <div class="form-group">
+                <span>
+                	<input type="text" placeholder="type new Interests here" id="inputbox" />
+                	<button class="btn btn-primary" id="addInterest" >Add Interests</button> 
+  
+                </span>
+            </div>
+
+
+	<!-- Modal Popup Notifying you of your interests-->
+	<div class="modal fade" id="name-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	      </div>
+	      <div class="modal-body" id="name-modal-body">
+	      	<input type="text" name="new-name" id="new-name">
+	      </div>
+	      <div class="modal-footer">
+	      	<button type="button" class="btn btn-default" id="change-name" data-dismiss="modal">Change Name</button>
+	      </div>
+	    </div>
+	  </div>
 	</div>
+
+	<!-- Modal Popup Notifying you of your interests-->
+	<div class="modal fade" id="email-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	      </div>
+	      <div class="modal-body" id="name-modal-body">
+	      	<input type="text" name="new-email" id="new-email">
+	      </div>
+	      <div class="modal-footer">
+	      	<button type="button" class="btn btn-default" id="change-email" data-dismiss="modal">Change Email</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+    </div>
 
 </body>
 </html>
