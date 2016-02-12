@@ -70,20 +70,36 @@
 		</div>
 	</div>
 
-	<!-- Modal Popup-->
+	<!-- Modal Popup Notifying you of your interests-->
 	<div class="modal fade" id="yes-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Added to your interests!</h4>
+	        <h4 class="modal-title" id="yes-modal-label"></h4>
 	      </div>
-	      <div class="modal-body">
-	        Keep making matches or go check your profile?
+	      <div class="modal-body" id="yes-modal-body">
 	      </div>
 	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" id="go-to-profile-btn" data-dismiss="modal">Go to profile</button>
-	        <button type="button" class="btn btn-primary" id="keep-matching-btn">Keep matching!</button>
+	      	<button type="button" class="btn btn-default" id="yes-modal-back-to-matching-btn" data-dismiss="modal">Back to matching</button>
+	        <button type="button" class="btn btn-primary" id="show-me-btn">Show me!</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Modal Popup Showing upcoming events for the club-->
+	<div class="modal fade" id="upcoming-events-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="upcoming-events-modal-label"></h4>
+	      </div>
+	      <div class="modal-body" id="upcoming-events-modal-body">
+	      </div>
+	      <div class="modal-footer">
+	      	<button type="button" class="btn btn-default" id="upcoming-events-back-to-matching-btn" data-dismiss="modal">Back to matching</button>
 	      </div>
 	    </div>
 	  </div>

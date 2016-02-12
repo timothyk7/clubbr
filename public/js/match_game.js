@@ -1,6 +1,6 @@
 'use strict';
 
-var clubCounter = 1;
+var clubCounter = 0;
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
@@ -13,44 +13,93 @@ $(document).ready(function() {
 function initializePage() {
 	console.log("Javascript connected!");
 
-	// Add any additional listeners here
-	// example: $("#div-id").click(functionToCall);
+
+	// add listeners to the buttons
 	$("#no-btn").click(noClick);
 	$("#yes-btn").click(yesClick);
-	$("#go-to-profile-btn").click(goToProfile);
-	$("#keep-matching-btn").click(noClick);
+	$("#yes-modal-back-to-matching-btn").click(noClick);
+	$("#upcoming-events-back-to-matching-btn").click(noClick);
+	$("#show-me-btn").click(showEventList);
 }
 
+/*
+ * Listener for when you click the no button
+ */
 function noClick(e) {
     console.log("No clicked");
     e.preventDefault();	
 
-    var idNumber = clubCounter % 6;
     clubCounter++;
-    $.get("/"+idNumber, getNextClub);	
-    $('#yes-modal').modal('hide')
+    clubCounter = clubCounter % 6;
+    var idNumber = clubCounter;
+
+    // get the club with id of idNumber
+    $.get("/"+idNumber, getNextClub);
 }
 
-function getNextClub(result) {
-	console.log(result)
 
+function getNextClub(result) {
+
+	// fill in the title, description, and image using the json data
 	$("#club-title").text(result['name']);
  	$("#club-description").text(result['description']);
 	$("#club-img").attr('src', result['imageURL']);
 }
 
+/*
+ * Makes a modal popup when yes is clicked
+ */
 function yesClick(e) {
     console.log("Yes clicked");
     e.preventDefault();	
 
+    // get the current club's title
+    var club_title = $("#club-title").text();
+
+    // fill in the title and body of the popup modal
+    $('#yes-modal-label').text('Added ' + club_title + ' to your interests!');
+    $('#yes-modal-body').text('Would you like to see the upcoming events for ' + club_title + '?');
+
+    // display the modal
 	$('#yes-modal').modal();
 	
 }
 
-function goToProfile(e) {
+/*
+ *
+ */
+function showEventList(e) {
 	// Prevent following the link
 	e.preventDefault();
 
-	window.location.href = '/profile';
+	// hide the currently showing yes-modal
+	$('#yes-modal').modal('hide');
 
+	// get the current club json info and display in modal
+	$.get("/"+clubCounter, getEventList);	
+
+	// show the modal
+	$('#upcoming-events-modal').modal();
+
+}
+
+function getEventList(result) {
+	// fill in the title of the modal
+	$('#upcoming-events-modal-label').text('Upcoming events for ' + result['name']);
+
+	var events = result['events'];
+	var eventHtml = "";
+	var i;
+
+	// loop through the club's events and create html
+	for (i=0; i < events.length; i++) {
+		eventHtml += "<h4>" + events[i]['title'] + "</h4>" +
+					 "<h5>" + events[i]['time'] + 
+					 "<h5>" + events[i]['description'] +
+					 "<p><br></p>";
+
+	}
+
+	// insert the html in the modal body
+	$('#upcoming-events-modal-body').html(eventHtml);
 }

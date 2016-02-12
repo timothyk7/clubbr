@@ -5,42 +5,140 @@
 			"clubID": "composting-club",
 			"name": "Composting Club",
 			"description": "Composting is cool",
-			"imageURL": "http://www.sandiegocounty.gov/content/dam/sdc/dpw/SOLID_WASTE_PLANNING_and_RECYCLING/Files/compostinghands.jpg"			
+			"imageURL": "http://www.sandiegocounty.gov/content/dam/sdc/dpw/SOLID_WASTE_PLANNING_and_RECYCLING/Files/compostinghands.jpg",
+			"events": [
+				{
+					"title": "Composting Panel",
+					"time": "Wed, 2/22, 7:00pm",
+					"location": "Center 115",
+					"description": "Learn from the experts of composting! Free kale salads!"
+				},
+				{
+					"title": "Week 8 GBM",
+					"time": "Mon, 2/22, 7:00pm",
+					"location": "Center 115",
+					"description": "Bi-Weekly GBM"
+				},
+				{
+					"title": "Garden Party",
+					"time": "Mon, 2/22, 7:00pm",
+					"location": "Center 115",
+					"description": "Plant some flowers and socialize with others. Free food!"
+				}
+			]			
 		},
 		{
 			"id": 1, 
 			"clubID": "cycling-club",
 			"name": "Cycling Club",
 			"description": "We like bicycling, bicycling is our passion",
-			"imageURL": "http://www.balloons.com.au/Images/LargeImages/peppa_pig_bike_lrg.JPG"			
+			"imageURL": "http://www.balloons.com.au/Images/LargeImages/peppa_pig_bike_lrg.JPG",
+			"events": [
+				{
+					"title": "Bicycler Mixer",
+					"time": "Wed, 2/22, 7:00pm",
+					"location": "Center 115",
+					"description": "Meet others who have the same passion for bicycling!"
+				},
+				{
+					"title": "Bike for Humanity",
+					"time": "Mon, 2/22, 7:00pm",
+					"location": "Center 115",
+					"description": "Get a workout while also supporting a great cause!"
+				},
+				{
+					"title": "Bake Sale",
+					"time": "Mon, 2/22, 7:00pm",
+					"location": "Center 115",
+					"description": "Help us raise money toward our cross-country biking trip!"
+				},
+				{
+					"title": "San Diego Bicycling Tour",
+					"time": "Mon, 2/22, 7:00pm",
+					"location": "Center 115",
+					"description": "See the landmarks of San Diego on this biking tour, anyone is free to join!"
+				}
+			]			
 		},
 		{
 			"id": 2, 
 			"clubID": "reusable-tote-bag-crusaders",
 			"name": "Reusable Tote Bag Crusaders",
 			"description": "Stop wastin plastic!!",
-			"imageURL": "http://cdn.coolmompicks.com/wp-content/uploads/2014/11/Oh-Kale-Yeah-reusable-grocery-tote-bag.jpg"			
+			"imageURL": "http://cdn.coolmompicks.com/wp-content/uploads/2014/11/Oh-Kale-Yeah-reusable-grocery-tote-bag.jpg",
+			"events": [
+				{
+					"title": "Create your own tote bags",
+					"time": "Wed, 2/22, 7:00pm",
+					"location": "Center 115",
+					"description": "We will have screen printing stations so everyone can have their own personalized tote bag"
+				},
+				{
+					"title": "Free tote bags!",
+					"time": "Mon, 2/22, 7:00pm",
+					"location": "Center 115",
+					"description": "We'll be handing out free tote bags on library walk"
+				}
+			]			
 		},
 		{
 			"id": 3, 
 			"clubID": "save-the-bees",
 			"name": "Save the Bees",
 			"description": "We love bees more than people",
-			"imageURL": "http://www.clownsonrounds.com/wp-content/uploads/2015/03/bee-cartoon.png"			
+			"imageURL": "http://www.clownsonrounds.com/wp-content/uploads/2015/03/bee-cartoon.png",
+			"events": [
+				{
+					"title": "Beekeeping Workshop",
+					"time": "Wed, 2/22, 7:00pm",
+					"location": "Center 115",
+					"description": "Local beekeepers will show you how to have a hive of your own"
+				}
+			]			
 		},
 		{
 			"id": 4, 
 			"clubID": "extreme-knitting-club",
 			"name": "Extreme Knitting Club",
 			"description": "We're an extremely tight-knit family!",
-			"imageURL": "http://paveseattle.org/wp-content/uploads/2015/08/KnittingBasket.jpg"
+			"imageURL": "http://paveseattle.org/wp-content/uploads/2015/08/KnittingBasket.jpg",
+			"events": [
+				{
+					"title": "Knit-a-thon",
+					"time": "Wed, 2/22, 7:00pm",
+					"location": "Center 115",
+					"description": "24-hours of nonstop knitting! See who can last the longest! Free food will be provided. "
+				},
+				{
+					"title": "Week 8 GBM",
+					"time": "Mon, 2/22, 7:00pm",
+					"location": "Center 115",
+					"description": "Weekly GBM, get together with fellow knitters!"
+				},
+				{
+					"title": "Knitting Circle",
+					"time": "Mon, 2/22, 7:00pm",
+					"location": "Center 115",
+					"description": "Share your latest projects, learn new techniques from other knitters"
+				}
+
+			]
 		},
 		{
 			"id": 5, 
 			"clubID": "tubbs-fanclub",
 			"name": "Tubbs Fanclub",
 			"description": "Finicky Feaster",
-			"imageURL": "https://pbs.twimg.com/media/CT_HQpdWcAEn2C0.jpg"
+			"imageURL": "https://pbs.twimg.com/media/CT_HQpdWcAEn2C0.jpg",
+			"events": [
+				{
+					"title": "Fight",
+					"time": "Wed, 2/22, 7:00pm",
+					"location": "Center 115",
+					"description": "We're gonna fight people"
+				}
+
+			]
 		}
 	]
 }
