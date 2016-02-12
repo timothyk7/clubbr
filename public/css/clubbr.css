@@ -44,6 +44,7 @@
   margin: 0 auto; 
   text-align: center;
   padding-top: 60px;
+  padding-bottom: 100px;
 }
 
 .club-buttons {
@@ -53,8 +54,19 @@
 .footer{
   position: fixed;
   bottom: 0;
-  padding: 20px;
+  height: 80px;
+  padding: 10px;
   width: 100%;
+  background: #FFFFFF;
+}
+
+.learn-more {
+  position: fixed;
+  bottom: 80px;
+  height: 60px;
+  padding: 10px;
+  width: 100%;
+  background: #FFFFFF;
 }
 
 .mid-align {
@@ -71,11 +83,6 @@
 
 .match-buttons {
   padding-left: 25px;
-}
-
-.
-.learn-more {
-  padding-top: 35px;
 }
 
 .search-container {

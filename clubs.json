@@ -6,6 +6,7 @@
 			"name": "Composting Club",
 			"description": "Composting is cool",
 			"imageURL": "http://www.sandiegocounty.gov/content/dam/sdc/dpw/SOLID_WASTE_PLANNING_and_RECYCLING/Files/compostinghands.jpg",
+			"learn-more": "Composting composting we love composting. This org is free to join. We welcome anyone who enjoys gardening, decomposers, or saving the earth. We have bi-weekly meetings where we discuss composting like what are the best materials to compost, how to customize your compost for each plant, and many other topics.",
 			"events": [
 				{
 					"title": "Composting Panel",
@@ -33,6 +34,7 @@
 			"name": "Cycling Club",
 			"description": "We like bicycling, bicycling is our passion",
 			"imageURL": "http://www.balloons.com.au/Images/LargeImages/peppa_pig_bike_lrg.JPG",
+			"learn-more": "Want a fun way to stay fit? Join the Cycling Club! We have monthly bicycling trips where we all bike together to a fun new destination. We welcome cyclers of all levels, so don't be intimidated!",
 			"events": [
 				{
 					"title": "Bicycler Mixer",
@@ -66,6 +68,7 @@
 			"name": "Reusable Tote Bag Crusaders",
 			"description": "Stop wastin plastic!!",
 			"imageURL": "http://cdn.coolmompicks.com/wp-content/uploads/2014/11/Oh-Kale-Yeah-reusable-grocery-tote-bag.jpg",
+			"learn-more": "Plastic bags are such a waste, and bad for the environment! Get on the tote life! We sell tote bags for cheap, and occasionally give them out for free.",
 			"events": [
 				{
 					"title": "Create your own tote bags",
@@ -87,6 +90,7 @@
 			"name": "Save the Bees",
 			"description": "We love bees more than people",
 			"imageURL": "http://www.clownsonrounds.com/wp-content/uploads/2015/03/bee-cartoon.png",
+			"learn-more":"Bees are dying and we need to help! We are a volunteering club that aims to raise awareness on this issue, and help protect bees. You'll also learn cool info about bees and beekeeping!",
 			"events": [
 				{
 					"title": "Beekeeping Workshop",
@@ -102,6 +106,7 @@
 			"name": "Extreme Knitting Club",
 			"description": "We're an extremely tight-knit family!",
 			"imageURL": "http://paveseattle.org/wp-content/uploads/2015/08/KnittingBasket.jpg",
+			"learn-more":"We're a knitting club that meets every week. A fee is required for membership, but we provide access to lots of patterns, and free food. Kit with friends while munching on cheese and crackers!",
 			"events": [
 				{
 					"title": "Knit-a-thon",
@@ -130,9 +135,10 @@
 			"name": "Tubbs Fanclub",
 			"description": "Finicky Feaster",
 			"imageURL": "https://pbs.twimg.com/media/CT_HQpdWcAEn2C0.jpg",
+			"learn-more":"We love Tubbs",
 			"events": [
 				{
-					"title": "Fight",
+					"title": "Fight Me",
 					"time": "Wed, 2/22, 7:00pm",
 					"location": "Center 115",
 					"description": "We're gonna fight people"
