@@ -53,7 +53,7 @@ function noClick(e) {
 		$("div.learn-more").show();
     	
     	// get data for initial club
-		$.get( "/"+clubCounter, function(result) {
+		$.get( "/match_me/"+clubCounter, function(result) {
 			currentClub = result;			
 
 			// fill in the title, description, and image using the json data
