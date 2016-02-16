@@ -19,6 +19,7 @@ function initializePage() {
 	$("#editEmail").click(editEmail);
 	$("#change-name").click(editNameHelper);
 	$("#change-email").click(editEmailHelper);
+	$("#delete-button").click(deleteInterests)
 }
 
 
@@ -31,8 +32,6 @@ function editInterestsClick(e) {
 function addInterestsClick(e) {
 	console.log("Add Interests clicked");
 	$("#profile-interests").append( $("<li>" + $("#inputbox").val() + "</li>") );
-  	li.appendChild(document.createTextNode("Four"));
-  	elem.appendChild(li);
 }
 
 function editName(e) {
@@ -71,4 +70,10 @@ function editEmailHelper(){
 		$('#email-modal').parents('p').addClass('warning')
 	}
 
+}
+
+
+function deleteInterests(e){
+	console.log("deleteInterests");
+    $('li').remove();
 }
