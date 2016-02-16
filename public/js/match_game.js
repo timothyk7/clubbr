@@ -15,7 +15,7 @@ function initializePage() {
 	console.log("Javascript connected!");
 
 	// get data for initial club
-	$.get( "/"+clubCounter, function(result) {
+	$.get( "/match_me/"+clubCounter, function(result) {
 		currentClub = result;
 	});
 
@@ -23,11 +23,10 @@ function initializePage() {
 	// add listeners to the buttons
 	$("#no-btn").click(noClick);
 	$("#yes-btn").click(yesClick);
-	$("#learn-more-btn").click(learnMoreClick);
 	$("#yes-modal-back-to-matching-btn").click(noClick);
-	$("#upcoming-events-back-to-matching-btn").click(noClick);
-	$("#show-me-btn").click(showEventList);
-	$("#go-to-profile-btn").click(goToProfile);
+	$("#show-events-btn").click(showEventList);
+	$("#yes-modal-go-to-profile-btn").click(goToProfile);
+	$("#no-more-modal-go-to-profile-btn").click(goToProfile);
 	$("#start-again-btn").click(noClick);
 }
 
@@ -47,10 +46,6 @@ function noClick(e) {
     	clubCounter = -1;
     }
     else {
-    	// get the club with id of idNumber
-    	$("#learn-more").text("");
-
-		$("div.learn-more").show();
     	
     	// get data for initial club
 		$.get( "/match_me/"+clubCounter, function(result) {
@@ -60,6 +55,7 @@ function noClick(e) {
 			$("#club-title").text(currentClub['name']);
 		 	$("#club-description").text(currentClub['description']);
 			$("#club-img").attr('src', currentClub['imageURL']);
+			$("#learn-more").text(currentClub['learn-more']);
 
 		});
     }
@@ -78,20 +74,11 @@ function yesClick(e) {
 
     // fill in the title and body of the popup modal
     $('#yes-modal-label').text('Added ' + club_title + ' to your interests!');
-    $('#yes-modal-body').text('Would you like to see the upcoming events for ' + club_title + '?');
-
     // display the modal
 	$('#yes-modal').modal();
 	
 }
 
-function learnMoreClick(e) {
-	var learnMoreInfo = currentClub['learn-more'];
-
-	$("#learn-more").text(learnMoreInfo);
-
-	$("div.learn-more").hide();
-}
 
 /*
  *
