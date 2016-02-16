@@ -53,7 +53,9 @@
 
 				<h3 id="club-description">{{clubs.0.description}}</h3>
 
-				<p id="learn-more"></p>
+				<p id="learn-more">{{clubs.0.learn-more}}</p>
+
+				<button id="show-events-btn" class="club-buttons btn btn-primary btn-lg ">Show events for this org</button>
 
 			</div>
 
@@ -64,10 +66,7 @@
 
 	<!-- commento -->
 
-	<!-- yes/no/learnmore buttons -->
-	<div class="learn-more mid-align">
-		<button type="button" class="btn btn-primary" id="learn-more-btn">Learn More</button>
-	</div>
+	<!-- yes/no buttons -->
 	<div class="footer">
 		<div class="col-xs-6 mid-align">
 			<button id="yes-btn" class="club-buttons btn btn-primary btn-lg ">Yes</button>
@@ -91,7 +90,7 @@
 	      </div>
 	      <div class="modal-footer">
 	      	<button type="button" class="btn btn-default" id="start-again-btn" data-dismiss="modal">Start Again</button>
-	        <button type="button" class="btn btn-primary" id="go-to-profile-btn">Go to Profile</button>
+	        <button type="button" class="btn btn-primary" id="no-more-modal-go-to-profile-btn">Go to Profile</button>
 	      </div>
 	    </div>
 	  </div>
@@ -106,10 +105,11 @@
 	        <h4 class="modal-title" id="yes-modal-label"></h4>
 	      </div>
 	      <div class="modal-body" id="yes-modal-body">
+	      	Would you like to see your updated profile, or go back to matching?
 	      </div>
 	      <div class="modal-footer">
 	      	<button type="button" class="btn btn-default" id="yes-modal-back-to-matching-btn" data-dismiss="modal">Back to matching</button>
-	        <button type="button" class="btn btn-primary" id="show-me-btn">Show me!</button>
+	      	<button type="button" class="btn btn-primary" id="yes-modal-go-to-profile-btn">Go to Profile</button>
 	      </div>
 	    </div>
 	  </div>
@@ -126,7 +126,7 @@
 	      <div class="modal-body" id="upcoming-events-modal-body">
 	      </div>
 	      <div class="modal-footer">
-	      	<button type="button" class="btn btn-default" id="upcoming-events-back-to-matching-btn" data-dismiss="modal">Back to matching</button>
+	      	<button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
 	      </div>
 	    </div>
 	  </div>
