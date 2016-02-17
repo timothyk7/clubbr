@@ -1,7 +1,6 @@
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
-	initializeNavBar();
 	initializePopover();
 	// $(window).resize(function()
 	// {
@@ -13,20 +12,6 @@ $(document).ready(function() {
 	//     }
 	// });
 })
-
-
-
-function initializeNavBar(){
-	var navbar ='<div class="navbar-header col-xs-12">'+
-				'<a class="navbar-brand" href="/home" style="margin-top:10px;">Clubbr</a>'+
-				'<div class="navbar-right pull-right" style="margin-right:10px;">'+
-				'<p class="navbar-text">'+
-				'Signed in as <a href="/profile" class="navbar-link">Wendy Tang&nbsp&nbsp</a>'+
-				'<a tabindex="0" class="navbar-link login-focus" role="button" data-toggle="popover" data-placement="bottom">'+
-				'<img src="images/wendy.jpeg" class="profile-thumbnail"></img>'+
-				'</a></p></div></div> ';
-	$(".navbar").append(navbar);
-}
 
 function initializePopover(){
 	var popoverTemplate = [ '<div class="popover">',
