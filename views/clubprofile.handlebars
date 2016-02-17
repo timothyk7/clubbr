@@ -5,12 +5,14 @@
 	<title>Clubbr</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = yes, maximum-scale=1.0">
+    <link rel="icon" href="images/favicon.ico">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/clubbr.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/clubprofile.css">
     <script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/nav.js"></script>
 	<!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -23,30 +25,16 @@
 
 <body>
 
-<!-- 	basic fixed navigation bar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-	    <div class="container-fluid">
-			<div class="navbar-header col-xs-12 ">
-				<!-- the name/logo for the site, links to home page	 -->
-				<a class="navbar-brand" href="/home">Clubbr</a>
-
-				<div class="navbar-right pull-right">
-					<!-- shows your username and profile pic -->
-					<p class="navbar-text navbar-right right-padding">
-						Signed in as <a href="/profile" class="navbar-link">Wendy Tang</a>
-						<a href="/profile" class="navbar-link"><img src="images/wendy.jpeg" class="profile-thumbnail"></img></a>
-					</p>
-				</div>
-			</div> 
-		</div>
-	</nav>
+    <nav class="navbar navbar-default navbar-fixed-top"> 
+        {{> navbar}}
+    </nav>
 
 
 	<div class="container-fluid">
 		<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 profileBlock">
             <div class="content clearfix">
                 <h1 class="center">{{name}}</h1>
-                <div id="userphoto" class="center form-group">
+                <div id="clubphoto" class="center form-group">
                     <img src="{{imageURL}}" alt="default avatar">
                 </div>
                 	<p>{{Description}}</p>
