@@ -1,3 +1,33 @@
+/*Nav Bar*/
+.profile-thumbnail {
+	height: 45px;
+	width: 45px;
+	border-radius: 50%;
+}
+
+.login-focus:focus {
+  outline: none;
+  outline-width: 0px;
+}
+
+.right-padding {
+	padding-right: 5px;
+}
+
+.popover.bottom { 
+  margin-top: 25px;
+}
+
+.nav-right {
+  margin-top: 10px;
+}
+
+/*#createProfileForm{
+	margin: 25px;
+}*/
+
+/*Home Page*/
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -7,37 +37,16 @@
 }
 
 .clubbr-body{
-	padding: 70px;
+  padding: 70px;
 }
 
-.profile-thumbnail {
-	height: 45px;
-	width: 45px;
-	border-radius: 50%;
-}
-
-.right-padding {
-	padding-right: 5px;
-}
-
-#createProfileForm{
-	margin: 25px;
-}
-
-#submitBtn{
+/*#submitBtn{
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
-}
+}*/
 
-.name-input-padding{
-	padding: 20px;
-}
-
-.profile-pic{
-	width: 200px;
-	height: 200px;
-}
+/*Match Me */
 
 .club-container {
   width: 50%;
@@ -85,6 +94,8 @@
   padding-left: 25px;
 }
 
+/*Orgs Page*/
+
 .search-container {
     margin-right: 200px;
     text-align: center;
@@ -103,6 +114,36 @@
 
 .search_button {
   width: 30px;
+}
+
+.listControl{
+    margin-bottom: 15px;
+}
+    
+.listControl a {
+    border: 1px solid #555555;
+    color: #555555;
+    cursor: pointer;
+    height: 1.5em;
+    line-height: 1.5em;
+    margin-right: 5px;
+    padding: 4px 10px;
+}
+.listControl a:hover {
+    background-color:#555555;
+    color:#222222; 
+    font-weight:normal;
+}
+
+/*Personal Profile*/
+
+.name-input-padding{
+  padding: 20px;
+}
+
+.profile-pic{
+  width: 200px;
+  height: 200px;
 }
 
 .profile-picture {
@@ -130,24 +171,4 @@
 
 #profile-email{
   font-size: 200%;
-}
-
-  .listControl{
-      margin-bottom: 15px;
-    }
-
-    
-.listControl a {
-    border: 1px solid #555555;
-    color: #555555;
-    cursor: pointer;
-    height: 1.5em;
-    line-height: 1.5em;
-    margin-right: 5px;
-    padding: 4px 10px;
-}
-.listControl a:hover {
-    background-color:#555555;
-    color:#222222; 
-    font-weight:normal;
 }
