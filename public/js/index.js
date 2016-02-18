@@ -6,8 +6,8 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
+	clear();
 	$('#submitBtn').click(login);
-
 }
 
 /*
@@ -19,11 +19,17 @@ function login(e) {
 	if(checkCompleted()){
 		clearBorder();
 		setTimeout(function(){
-			window.location.href = '/home';
+			authenticate($("#email").val(), $("#password").val());
 		}, 500);	
 	}else{
 		alert("Please enter your email and password");
 	}
+}
+
+function clear(){
+	$("#email").val("");
+	$("#password").val("");
+	clearBorder();
 }
 
 function clearBorder(){
@@ -46,6 +52,14 @@ function checkCompleted(){
 	return completed;
 }
 
-function authenticate(result){
-	console.log(result);
-}
+function authenticate(email, password) {
+        $.post("/authenticate?email=" + email + "&password=" + password, function(result) {
+            if (result["verified"]) {
+                clear();
+                window.location.href = '/home';
+            } else {
+                alert("Invalid username and/or password");
+                return;
+            }
+        });
+    }
