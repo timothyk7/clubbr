@@ -1,0 +1,38 @@
+[
+	{
+	    "name": "Timothy Kua",
+	    "email": "tkua@ucsd.edu",
+	    "password": "tim",
+	    "interests": [
+		    {
+				"id": 6, 
+				"interest": "Pets",
+				"remove_space": "Pets"
+			}
+	    ]
+	},
+	{
+	    "name": "Wendy Tang",
+	    "email": "wet@ucsd.edu",
+	    "password": "wendy",
+	    "interests": [
+	    	{
+				"id": 6, 
+				"interest": "Pets",
+				"remove_space": "Pets"
+			}
+	    ]
+	},
+	{
+	    "name": "Anthony Yu",
+	    "email": "ant@ucsd.edu",
+	    "password": "anthony",
+	    "interests": [
+	    	{
+				"id": 6, 
+				"interest": "Pets",
+				"remove_space": "Pets"
+			}
+	    ]
+	}
+]
