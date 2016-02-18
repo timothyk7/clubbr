@@ -19,7 +19,7 @@ function initializePage() {
 	$("#editEmail").click(editEmail);
 	$("#change-name").click(editNameHelper);
 	$("#change-email").click(editEmailHelper);
-	$("#delete-button").click(deleteInterests)
+	$("#saveChanges").click(addInterestsHelper);
 }
 
 
@@ -31,7 +31,28 @@ function editInterestsClick(e) {
 
 function addInterestsClick(e) {
 	console.log("Add Interests clicked");
-	$("#profile-interests").append( $("<li>" + $("#inputbox").val() + "</li>") );
+	$('#interests-modal').modal();
+}
+
+var counter = 0;
+function addInterestsHelper(){
+	console.log("addInterestsHelper");
+
+	var checkboxes = $("input[type='checkbox']");
+	console.log(checkboxes.length);
+	for (var i=0; i<checkboxes.length; i++)  {
+			if (checkboxes[i].type == 'checkbox' && checkboxes[i].checked ) {
+				var checkName = checkboxes[i].id;
+				$('#profile-interests').append('<li>'+ checkName + '<input type="submit" id="delete-button' + counter + '"  value="Delete">' +'</li>');
+				var del_counter = "#delete-button" + counter;
+				console.log(del_counter);
+				$(del_counter).click(deleteInterests);
+				counter++
+		}
+	}
+
+
+
 }
 
 function editName(e) {
@@ -75,5 +96,5 @@ function editEmailHelper(){
 
 function deleteInterests(e){
 	console.log("deleteInterests");
-    $('li').remove();
+	$(this).closest('li').remove();
 }
