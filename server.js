@@ -7,6 +7,7 @@ var http = require('http');
 var path = require('path');
 var hbs = require('hbs');
 var handlebars = require('express3-handlebars')
+var mongoose = require('mongoose');
 
 
 var index = require('./routes/index');
@@ -16,6 +17,17 @@ var orgs = require('./routes/orgs');
 var match_me = require('./routes/match_me');
 var profile = require('./routes/profile');
 var clubprofile = require('./routes/clubprofile');
+
+//DB Setup
+var local_database_name = 'clubbr';
+var local_database_uri = 'mongodb://127.0.0.1/' + local_database_name
+var database_uri = process.env.MONGOLAB_URI || local_database_uri
+mongoose.connect(database_uri);
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function callback() {
+    console.log("DB Connected");
+});
 
 // Create the server instance
 var app = express();
@@ -40,13 +52,14 @@ app.listen(port, function() {
 	console.log("Node.js server running on port %s", port);
 });
 
+//routes
 app.get('/', index.view);
 app.get('/signup', signup.view);
 app.get('/home', home.view);
 app.get('/orgs', orgs.view);
 app.get('/match_me', match_me.view);
 app.get('/profile', profile.view);
-// app.get('/clubprofile/:id', clubprofile.view);
 app.get('/clubprofile', clubprofile.view);
 app.get('/match_me/:id', orgs.clubInfo); //change
 
+app.post("/authenticate", index.authenticate);
