@@ -23,16 +23,16 @@ mongod --dbpath data/db
 ```
 Note: This should be on a separate terminal in order for have db running.
 
+##Loading Default User Data
+To clear the DB and load the default user credentials, run the command:
+```
+node initDB.js
+```
+
 ##Starting Application:
 To start our application, run the following command:
 ```
 node server.js
-```
-
-##Loading Default User Data
-There are default user credentials available at user.json file. To load these objects to database, before Node server is running, type:
-```
-node initDB.js
 ```
 
 Heroku Site:
