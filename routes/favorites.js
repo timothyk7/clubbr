@@ -1,5 +1,10 @@
-var clubs = require('../clubs.json');
+var models = require('../models');
 
 exports.view = function(req, res){
-	res.render('favorites', clubs);
-}
+	var user = models.User.findOne({'name': 'Wendy Tang'})
+				.exec(renderFavorites);
+
+	function renderFavorites(err, favorites) {
+		res.render('favorites', {'favorites': user.favorites});
+	}
+};
