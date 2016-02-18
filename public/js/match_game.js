@@ -25,7 +25,7 @@ function initializePage() {
 	$("#yes-btn").click(yesClick);
 	$("#yes-modal-back-to-matching-btn").click(noClick);
 	$("#show-events-btn").click(showEventList);
-	$("#yes-modal-go-to-profile-btn").click(goToProfile);
+	$("#yes-modal-go-to-favorites-btn").click(goToFavorites);
 	$("#no-more-modal-go-to-profile-btn").click(goToProfile);
 	$("#start-again-btn").click(noClick);
 }
@@ -73,7 +73,7 @@ function yesClick(e) {
     var club_title = currentClub['name'];
 
     // fill in the title and body of the popup modal
-    $('#yes-modal-label').text('Added ' + club_title + ' to your interests!');
+    $('#yes-modal-label').text('Added ' + club_title + ' to your favorites');
     // display the modal
 	$('#yes-modal').modal();
 	
@@ -119,4 +119,8 @@ function showEventList(e) {
 
 function goToProfile(e) {
 	window.location.href = '/profile';
+}
+
+function goToFavorites(e) {
+	window.location.href = '/favorites';
 }
