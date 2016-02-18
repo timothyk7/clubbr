@@ -16,6 +16,7 @@ var orgs = require('./routes/orgs');
 var match_me = require('./routes/match_me');
 var profile = require('./routes/profile');
 var clubprofile = require('./routes/clubprofile');
+var favorites = require('./routes/favorites');
 
 // Create the server instance
 var app = express();
@@ -49,4 +50,5 @@ app.get('/profile', profile.view);
 // app.get('/clubprofile/:id', clubprofile.view);
 app.get('/clubprofile', clubprofile.view);
 app.get('/match_me/:id', orgs.clubInfo); //change
+app.get('/favorites', favorites.view);
 

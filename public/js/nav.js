@@ -20,6 +20,7 @@ function initializePopover(){
         					'</div>'].join('');
 
     var content = [ '<div style="margin:5px;"> <a href="/profile" class="btn btn-default">My Profile</a> </div>',
+    				'<div style="margin:5px;"> <a href="/favorites" class="btn btn-default">Favorites&nbsp</a> </div>',
         			'<div style="margin:5px;"><a href="/" class="btn btn-default" >&nbsp&nbspLogout&nbsp&nbsp&nbsp</a></div>'
         			].join('');
 

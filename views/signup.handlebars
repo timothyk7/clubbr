@@ -60,7 +60,7 @@
                     </div>
                     <div>
                       <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-default center space" data-toggle="modal" data-target="#myModal">
+                      <button type="button" class="btn btn-default center space" id="seeMoreBtn">
                         See More
                       </button>
 
@@ -95,5 +95,19 @@
             </div><!-- @end #content -->
           </div><!-- @end #w -->
     </div>
+
+    <script>
+      $('#seeMoreBtn').on('click', function() {
+        var interestHtml = '{{#each extra_interests}}' +
+                                '<div class="col-md-6 columns center" id="checkBoxInterestsModal">' + 
+                                        '<label class="checkbox-inline" for="{{remove_space}}">' +
+                                        '<input type="checkbox" name="Checkboxes" id="{{remove_space}}" value="{{interest}}">' +
+                                            '{{interest}}' +
+                                        '</label>' +
+                                '</div>' +
+                           '{{/each}}';
+        $('#interest').append(interestHtml);
+      });
+    </script>
 </body>
 </html>
