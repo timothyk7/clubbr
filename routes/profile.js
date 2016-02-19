@@ -29,5 +29,8 @@ function authenticate(req, res){
 //change as needed
 function createView(req, res, userData){
 	var userData = userData || {};
-	res.render('profile', interest_data);
+	result = {};
+	result['user'] = userData;
+	result['interests'] = interest_data;
+	res.render('profile', result);
 }

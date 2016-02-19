@@ -17,9 +17,9 @@
 	    "password": "wendy",
 	    "interests": [
 	    	{
-				"id": 6, 
-				"interest": "Pets",
-				"remove_space": "Pets"
+			"id": 0, 
+			"interest": "Honey Gathering",
+			"remove_space": "Honey_Gathering"
 			}
 	    ]
 	},
@@ -29,9 +29,14 @@
 	    "password": "anthony",
 	    "interests": [
 	    	{
-				"id": 6, 
-				"interest": "Pets",
-				"remove_space": "Pets"
+			"id": 3, 
+			"interest": "Cycling",
+			"remove_space": "Cycling"
+			},
+			{
+				"id": 4, 
+				"interest": "Sewing",
+				"remove_space": "Sewing"
 			}
 	    ]
 	}
