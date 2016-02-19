@@ -86,7 +86,7 @@ function editNameHelper(){
 
 function editEmail(e) {
 	console.log("editEmail");
- 		// show the modal 
+ 		// show the modal
 	$('#email-modal').modal();
 }
 
