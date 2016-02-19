@@ -11,7 +11,48 @@ $(document).ready(function() {
 			setTimeout(function(){
 				window.location.href = '/home';
 			}, 500);
-			
+			var user = $('#name').val();
+			var pass = $('#password').val();
+			var email = $('#email').val();
+			var interestArray = [];
+
+			var checkboxes = $("input[type='checkbox']");
+			var selected = false;
+			for (var i=0; i<checkboxes.length; i++)  {
+	  		if (checkboxes[i].type == 'checkbox' && checkboxes[i].checked ) {
+	  			var result = {}
+	  			//finds the remove space part
+	  			var idTemp = checkboxes[i].id;
+	  			var indexid = idTemp.indexOf("-");
+	  			var idTemp = idTemp.substring(indexid+2);
+	  			var idNum = parseInt(idTemp);
+	  			result["id"] = idNum;
+	  			result["interest"] = checkboxes[i].value;
+	  			var idTemp = checkboxes[i].id;
+	  			var indexid = idTemp.indexOf("-");
+	  			var removeTemp = idTemp.substring(0,indexid);
+	  			result["remove_space"] = removeTemp;
+	  			interestArray.push(result);
+	  		}
+		}
+
+
+			//console.log(interestArray);
+
+
+			var json = {
+				"name": user,
+				"email": email,
+				"password": pass,
+				"interests": JSON.stringify(interestArray)
+			};
+
+			console.log(json.interests);
+
+			//console.log(json);
+			$.post("/signupsubmit", json,function() {
+				console.log("json sent!");
+			});	
 		}
         else
         	alert('Incomplete profile, please fillout highlighted parts');

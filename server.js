@@ -67,5 +67,6 @@ app.get('/clubprofile', clubprofile.view);
 app.get('/match_me/:id', orgs.clubInfo); //change
 app.get('/favorites', favorites.view);
 
+app.post('/signupsubmit', signup.signup);
 app.post('/addToFavorites', favorites.addFavorite);
 app.post("/authenticate", index.authenticate);

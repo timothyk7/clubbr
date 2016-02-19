@@ -51,7 +51,7 @@
                             {{#each interests}}
                             <div class="col-md-6 columns center" id="checkBoxInterests"> 
                                     <label class="checkbox-inline" for="{{remove_space}}">
-                                    <input type="checkbox" name="Checkboxes" id="{{remove_space}}" value="{{interest}}">
+                                    <input type="checkbox" name="Checkboxes" id="{{remove_space}}--{{id}}" value="{{interest}}">
                                         {{interest}}
                                     </label> 
                             </div>
@@ -77,7 +77,7 @@
                                 {{#each extra_interests}}
                                 <div class="col-md-6 columns center" id="checkBoxInterestsModal"> 
                                         <label class="checkbox-inline" for="{{remove_space}}">
-                                        <input type="checkbox" name="Checkboxes" id="{{remove_space}}" value="{{interest}}">
+                                        <input type="checkbox" name="Checkboxes" id="{{remove_space}}-{{id}}" value="{{interest}}">
                                             {{interest}}
                                         </label> 
                                 </div>
@@ -101,7 +101,7 @@
         var interestHtml = '{{#each extra_interests}}' +
                                 '<div class="col-md-6 columns center" id="checkBoxInterestsModal">' + 
                                         '<label class="checkbox-inline" for="{{remove_space}}">' +
-                                        '<input type="checkbox" name="Checkboxes" id="{{remove_space}}" value="{{interest}}">' +
+                                        '<input type="checkbox" name="Checkboxes" id="{{remove_space}}-{{id}}" value="{{interest}}">' +
                                             '{{interest}}' +
                                         '</label>' +
                                 '</div>' +
