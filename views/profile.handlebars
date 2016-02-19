@@ -40,9 +40,9 @@
 	                <div>
 
 	                	<!--<label class="control-label" for="name"> <h2>Wendy Tang</h2></label> -->
-	                	<div id ="profile-name">Wendy Tang </div>
+	                	<div id ="profile-name">{{user.name}}</div>
 	                	<button class="btn btn-secondary" id="editName">Edit Name</button>
-	     	            <div id ="profile-email">example.ucsd.edu </div>
+	     	            <div id ="profile-email">{{user.email}}</div>
 	                	<button class="btn btn-secondary" id="editEmail" >Edit email</button>
 	                </div>
 
@@ -50,6 +50,9 @@
 	                    <label class="control-label" for="Checkboxes">Interest(s):</label> 
 	                    	<!-- making a simple list that have interests --> 
 							 <ul id ='profile-interests' class ="profile-interests" style="list-style-type:none">
+							 	{{#each user.interests}}
+							 		<li>{{interest}}<input type="submit" id="delete-button{{id}}" class="interests" value="Delete"></li>
+							 	{{/each}}
 							</ul>  
 	                </div>
 	            </form>
@@ -108,10 +111,10 @@
         		</div>
         		<div class="modal-body">
          			<div id="interest" class="row">
-            			{{#each extra_interests}}
+            			{{#each interests.extra_interests}}
             				<div class="col-md-6 columns center" id="checkBoxInterestsModal"> 
                     			<label class="checkbox-inline" for="{{remove_space}}">
-                    			<input type="checkbox" name="Checkboxes" id="{{remove_space}}" value="{{interest}}">
+                    			<input type="checkbox" name="Checkboxes" id="{{id}}" value="{{remove_space}}">
                         			{{interest}}
                     			</label> 
             				</div>

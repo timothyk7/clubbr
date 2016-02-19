@@ -1,10 +1,11 @@
 'use strict';
 
+var addedInterests = [];
+
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
 })
-
 
 /*
  * Function that is called when the document is ready.
@@ -13,6 +14,11 @@ function initializePage() {
 	console.log("Javascript connected!");
 	// Add any additional listeners here
 	// example: $("#div-id").click(functionToCall);
+	$('.interests').each(function(){
+		var id = $(this).attr("id");
+		addedInterests.push('#'+id);
+		$('#'+id).click(deleteInterests);
+	});
 	$("#editInterest").click(editInterestsClick);
 	$("#addInterest").click(addInterestsClick);
 	$("#editName").click(editName);
@@ -34,7 +40,6 @@ function addInterestsClick(e) {
 	$('#interests-modal').modal();
 }
 
-var counter = 0;
 function addInterestsHelper(){
 	console.log("addInterestsHelper");
 
@@ -42,12 +47,14 @@ function addInterestsHelper(){
 	console.log(checkboxes.length);
 	for (var i=0; i<checkboxes.length; i++)  {
 			if (checkboxes[i].type == 'checkbox' && checkboxes[i].checked ) {
-				var checkName = checkboxes[i].id;
-				$('#profile-interests').append('<li>'+ checkName + '<input type="submit" id="delete-button' + counter + '"  value="Delete">' +'</li>');
-				var del_counter = "#delete-button" + counter;
-				console.log(del_counter);
-				$(del_counter).click(deleteInterests);
-				counter++
+				var checkName = checkboxes[i].value;
+				var del_counter = "#delete-button" + checkboxes[i].id;
+				if(addedInterests.indexOf(del_counter) == -1 ){
+					$('#profile-interests').append('<li>'+ checkName + '<input type="submit" id="delete-button' + checkboxes[i].id + '" class="interests" value="Delete">' +'</li>');
+					console.log(del_counter);
+					addedInterests.push(del_counter);
+					$(del_counter).click(deleteInterests);
+				}
 		}
 	}
 
@@ -96,5 +103,10 @@ function editEmailHelper(){
 
 function deleteInterests(e){
 	console.log("deleteInterests");
+	var id = '#'+$(this).attr('id');
+	var index = addedInterests.indexOf(id);
+	if (index > -1) {
+	    addedInterests.splice(index, 1);
+	}
 	$(this).closest('li').remove();
 }
