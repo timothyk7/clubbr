@@ -69,14 +69,17 @@ function yesClick(e) {
     console.log("Yes clicked");
     e.preventDefault();	
 
-    // get the current club's title
-    var club_title = currentClub['name'];
+    console.log(currentClub);
 
-    // fill in the title and body of the popup modal
-    $('#yes-modal-label').text('Added ' + club_title + ' to your favorites');
-    // display the modal
+	$.post('/addToFavorites', currentClub);
+
+	var club_title = currentClub['name'];
+
+	// fill in the title and body of the popup modal
+	$('#yes-modal-label').text('Added ' + club_title + ' to your favorites');
+	// display the modal
 	$('#yes-modal').modal();
-	
+
 }
 
 
