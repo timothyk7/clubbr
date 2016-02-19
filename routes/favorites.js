@@ -32,7 +32,6 @@ function createView(req, res, userData){
 	// res.render('favorites', clubs);
 	var favorites = {'favorites': userData['favorites']};
 	res.render('favorites', favorites);
-	console.log(favorites);
 }
 
 
@@ -54,8 +53,19 @@ exports.addFavorite = function(req, res) {
 
 		// console.log('favoriteClub');
 		// console.log(favoriteClub);
+		var alreadyInFavorites = false;
 
-		user.favorites.push(favoriteClub);
+		for(var i=0; i < user.favorites.length; i++) {
+		  if (JSON.stringify(user.favorites[i]) === JSON.stringify(favoriteClub) ) {
+		  	alreadyInFavorites = true;
+		  	break;
+		  }
+		}
+		
+		if(!alreadyInFavorites) {
+			user.favorites.push(favoriteClub);
+			console.log(user.favorites);
+		}
 
 		user.save(function(err){
 			if (err) return handleError(err);

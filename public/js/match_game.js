@@ -107,8 +107,9 @@ function showEventList(e) {
 	// loop through the club's events and create html
 	for (i=0; i < events.length; i++) {
 		eventHtml += "<h4>" + events[i]['title'] + "</h4>" +
-					 "<h5>" + events[i]['time'] + 
-					 "<h5>" + events[i]['description'] +
+					 "<p>" + events[i]['time'] + "</br>" +
+					 "Location: " + events[i]['location'] + "</br>" +
+					 "Description: " + events[i]['description'] + "</p>" +
 					 "<p><br></p>";
 
 	}
