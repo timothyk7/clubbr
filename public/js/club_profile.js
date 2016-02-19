@@ -1,6 +1,5 @@
 'use strict';
 
-var clubCounter = 0;
 var currentClub;
 
 // Call this function when the page loads (the "ready" event)
@@ -14,85 +13,44 @@ $(document).ready(function() {
 function initializePage() {
 	console.log("Javascript connected!");
 
+	var clubid = getParameterByName('id');
+
 	// get data for initial club
-	$.get( "/match_me/"+clubCounter, function(result) {
+	$.get( "/match_me/"+clubid, function(result) {
 		currentClub = result;
 	});
 
-
 	// add listeners to the buttons
-	$("#no-btn").click(noClick);
-	$("#yes-btn").click(yesClick);
-	$("#yes-modal-back-to-matching-btn").click(noClick);
+	$("#add-to-favorites-btn").click(addClick);
 	$("#show-events-btn").click(showEventList);
 	$("#yes-modal-go-to-favorites-btn").click(goToFavorites);
-	$("#no-more-modal-go-to-profile-btn").click(goToProfile);
-	$("#start-again-btn").click(noClick);
 }
-
-/*
- * Listener for when you click the no button
- */
- // commento
-function noClick(e) {
-    console.log("No clicked");
-    e.preventDefault();	
-
-    clubCounter++;
-
-    // reached end of clubs list
-    if(clubCounter >= 6) {
-    	$("#no-more-modal").modal();
-    	clubCounter = -1;
-    }
-    else {
-    	
-    	// get data for initial club
-		$.get( "/match_me/"+clubCounter, function(result) {
-			currentClub = result;			
-
-			// fill in the title, description, and image using the json data
-			$("#club-title").text(currentClub['name']);
-		 	$("#club-description").text(currentClub['description']);
-			$("#club-img").attr('src', currentClub['imageURL']);
-			$("#learn-more").text(currentClub['learn-more']);
-
-		});
-    }
-}
-
 
 /*
  * Makes a modal popup when yes is clicked
  */
-function yesClick(e) {
-    console.log("Yes clicked");
+function addClick(e) {
+    console.log("Add to favorites clicked");
     // e.preventDefault();	
 	var id = getParameterByName('auth');
 
 	var json = {'userid': id, 'currentClub': currentClub};
 
 	$.post('/addToFavorites', json, function() {
+
 		var club_title = currentClub['name'];
 
 		// fill in the title and body of the popup modal
 		$('#yes-modal-label').text('Added ' + club_title + ' to your favorites');
 		// display the modal
 		$('#yes-modal').modal();
-	});
 
+	});
 }
 
-
-/*
- *
- */
 function showEventList(e) {
 	// Prevent following the link
 	e.preventDefault();
-
-	// hide the currently showing yes-modal
-	$('#yes-modal').modal('hide');
 
 	// get the current club json info and display in modal
 	//$.get("/"+clubCounter, getEventList);	
@@ -121,16 +79,10 @@ function showEventList(e) {
 
 }
 
-function goToProfile(e) {
-	var id = getParameterByName('auth');
-	window.location.href = '/profile'+'?auth='+id;
-}
-
 function goToFavorites(e) {
 	var id = getParameterByName('auth');
 	window.location.href = '/favorites'+'?auth='+id;
 }
-
 
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;

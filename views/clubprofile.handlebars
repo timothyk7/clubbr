@@ -2,18 +2,19 @@
 
 <html>
 <head>
-	<title>Clubbr</title>	
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = yes, maximum-scale=1.0">
+    <title>Clubbr</title>   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = yes, maximum-scale=1.0">
     <link rel="icon" href="images/favicon.ico">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="css/clubbr.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/clubprofile.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/clubbr.css" rel="stylesheet">
     <script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="/js/nav.js"></script>
-	<!-- this is a comment in HTML -->
+    <script src="/js/club_profile.js"></script>
+
+    <!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,35 +26,77 @@
 
 <body>
 
+<!--    basic fixed navigation bar -->
     <nav class="navbar navbar-default navbar-fixed-top"> 
         {{> navbar}}
     </nav>
 
+    <!--    Meat of Match Me -->
+    <div class="container-fluid club-container">
+        <div class="row">
+            <h2 id="club-title">{{name}}</h2>
 
-	<div class="container-fluid">
-		<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 profileBlock">
-            <div class="content clearfix">
-                <h1 class="center">{{name}}</h1>
-                <div id="clubphoto" class="center form-group">
-                    <img src="{{imageURL}}" alt="default avatar">
-                </div>
-                	<p>{{Description}}</p>
-                	<ul>
-                		{{#each events}}
-                		<li>
-                			<div>
-                				<span>Title: {{title}}</span>
-                				<span>Time: {{time}}</span>
-                				<span>Location: {{location}}</span>
-                				<p>Description: {{description}}</p>
-                			</div>
-                			
-                		</li>
-                		{{/each}}
-                	</ul>
-            </div><!-- @end #content -->
-          </div><!-- @end #w -->
-	</div>
+            <div class="club-img">
+                <img class="img-responsive img-rounded" id="club-img" src="{{imageURL}}"></img>
+        
+
+                <h3 id="club-description">{{description}}</h3>
+
+                <p id="learn-more">{{learn-more}}</p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- commento -->
+
+    <!-- add to favorites buttons -->
+    <div class="footer mid-align">
+        <div class="club-buttons">
+            <button id="show-events-btn" class="club-buttons btn btn-primary btn-lg ">&nbsp&nbspShow events&nbsp&nbsp</button>
+        </div>
+        <div class="club-buttons">
+            <button id="add-to-favorites-btn" class="club-buttons btn btn-primary btn-lg">Add to favorites</button>
+        </div>
+    </div>
+
+    <!-- Modal Popup Notifying That you added to your interests-->
+    <div class="modal fade" id="yes-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="yes-modal-label"></h4>
+          </div>
+          <div class="modal-body" id="yes-modal-body">
+            Would you like to see your favorited clubs?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" id="yes-modal-back-to-matching-btn" data-dismiss="modal">No</button>
+            <button type="button" class="btn btn-primary" id="yes-modal-go-to-favorites-btn">Go to Favorites</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Popup Showing upcoming events for the club-->
+    <div class="modal fade" id="upcoming-events-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="upcoming-events-modal-label"></h4>
+          </div>
+          <div class="modal-body" id="upcoming-events-modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 </body>
 </html>
