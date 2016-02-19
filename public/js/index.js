@@ -56,7 +56,7 @@ function authenticate(email, password) {
         $.post("/authenticate?email=" + email + "&password=" + password, function(result) {
             if (result["verified"]) {
                 clear();
-                window.location.href = '/home';
+                window.location.href = '/home?auth='+result['id'];
             } else {
                 alert("Invalid username and/or password");
                 return;

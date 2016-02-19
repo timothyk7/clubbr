@@ -40,7 +40,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
 
-app.use(express.bodyParser());
+// app.use(express.bodyParser());
 // Return all pages in the /static directory
 // whenever they are requested at '/'
 // e.g., http://localhost:3000/index.html

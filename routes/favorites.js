@@ -1,14 +1,38 @@
+var clubs = require('../clubs.json');
 var models = require('../models');
-var favoriteClub
 
 exports.view = function(req, res){
-	var user = models.User.findOne({'name': 'Wendy Tang'})
-				.exec(renderFavorites);
+	authenticate(req, res);	
+}
 
-	function renderFavorites(err, user) {
-		res.render('favorites', {'favorites': user.favorites});
-	}
-};
+function authenticate(req, res){
+    models.User
+        .find({
+            "_id": req.query["auth"],
+        })
+        .exec(exists);
+
+    function exists(err, users) {
+        if (err) {
+            console.log(err);
+            res.redirect('/');
+        }else{
+        	if(users.length !== 0){
+        		createView(req, res, users[0]);
+				return;
+        	}
+        	res.redirect('/');
+        }
+    };
+}
+
+//change as needed
+function createView(req, res, userData){
+	var userData = userData || {};
+	// res.render('favorites', clubs);
+	res.render('favorites', userData);
+}
+
 
 exports.addFavorite = function(req, res) {
 	favoriteClub = req.body;
