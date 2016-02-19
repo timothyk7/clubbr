@@ -2,6 +2,7 @@
 
 $(document).ready(function() {
 	var id = getParameterByName('auth');
+	
 	if(id == undefined || id == ''){
 		window.location = "/";
 	}
@@ -15,7 +16,6 @@ $(document).ready(function() {
 	  }
 
 	  $(this).attr("href", href);
-	  console.log(href);
 	});
 	initializePopover(id);
 	// $(window).resize(function()
