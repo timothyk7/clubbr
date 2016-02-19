@@ -33,7 +33,7 @@ var UserSchema = new Mongoose.Schema({
     "email": String,
     "password": String,
     "interests": [InterestSchema],
-    "favorites": [ClubSchema]
+    "favorites": []
 });
 
 exports.User = Mongoose.model('User', UserSchema);

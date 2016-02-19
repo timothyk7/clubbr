@@ -30,29 +30,38 @@ function authenticate(req, res){
 function createView(req, res, userData){
 	var userData = userData || {};
 	// res.render('favorites', clubs);
-	res.render('favorites', userData);
+	var favorites = {'favorites': userData['favorites']};
+	res.render('favorites', favorites);
+	console.log(favorites);
 }
 
 
 exports.addFavorite = function(req, res) {
-	favoriteClub = req.body;
-	console.log('favoriteClub0');
-	console.log(favoriteClub);
+	var jsondata = req.body;
 
-	var favorite = new models.Club(favoriteClub);
+	var userid = jsondata['userid'];
 
-	var user = models.User.findOne({'name': 'Wendy Tang'}).exec(saveToFavorites);
+	var favoriteClub = {
+		"id": jsondata['currentClub[id]'], 
+		"clubID": jsondata['currentClub[clubID]'], 
+		"name": jsondata['currentClub[name]'],
+	};
+
+	models.User.findOne({"_id": userid}).exec(saveToFavorites);
 
 	function saveToFavorites(err, user) {
-		console.log('user:');
-		console.log(user);
-		console.log('favoriteClub');
-		console.log(favoriteClub);
-	}
+		if (err) return handleError(err);
 
-	res.send();
-	// user.save(function (err) {
-	// 	if (err) return handleError(err);
-	// 	console.log('Added To Favorites!');
-	// });
+		// console.log('favoriteClub');
+		// console.log(favoriteClub);
+
+		user.favorites.push(favoriteClub);
+
+		user.save(function(err){
+			if (err) return handleError(err);
+		}); 
+		//console.log('user:');
+		//console.log(user);
+		res.send();
+	}
 };

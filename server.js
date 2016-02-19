@@ -8,6 +8,7 @@ var path = require('path');
 var hbs = require('hbs');
 var handlebars = require('express3-handlebars')
 var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
 
 
 var index = require('./routes/index');
@@ -40,6 +41,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }))
 // app.use(express.bodyParser());
 // Return all pages in the /static directory
 // whenever they are requested at '/'

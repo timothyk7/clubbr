@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/timothyk7/clubbr#readme",
   "dependencies": {
+    "body-parser": "^1.15.0",
     "express": "^4.13.4",
     "express3-handlebars": "^0.5.2",
     "hbs": "^4.0.0",

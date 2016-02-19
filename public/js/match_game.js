@@ -67,11 +67,12 @@ function noClick(e) {
  */
 function yesClick(e) {
     console.log("Yes clicked");
-    e.preventDefault();	
+    // e.preventDefault();	
+	var id = getParameterByName('auth');
 
-    console.log(currentClub);
+	var json = {'userid': id, 'currentClub': currentClub};
 
-	$.post('/addToFavorites', currentClub);
+	$.post('/addToFavorites', json);
 
 	var club_title = currentClub['name'];
 
