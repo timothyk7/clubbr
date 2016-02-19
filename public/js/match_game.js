@@ -118,9 +118,22 @@ function showEventList(e) {
 }
 
 function goToProfile(e) {
-	window.location.href = '/profile';
+	var id = getParameterByName('auth');
+	window.location.href = '/profile'+'?auth='+id;
 }
 
 function goToFavorites(e) {
-	window.location.href = '/favorites';
+	var id = getParameterByName('auth');
+	window.location.href = '/favorites'+'?auth='+id;
+}
+
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
