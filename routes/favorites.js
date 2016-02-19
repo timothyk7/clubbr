@@ -29,5 +29,39 @@ function authenticate(req, res){
 //change as needed
 function createView(req, res, userData){
 	var userData = userData || {};
-	res.render('favorites', clubs);
+	// res.render('favorites', clubs);
+	var favorites = {'favorites': userData['favorites']};
+	res.render('favorites', favorites);
+	console.log(favorites);
 }
+
+
+exports.addFavorite = function(req, res) {
+	var jsondata = req.body;
+
+	var userid = jsondata['userid'];
+
+	var favoriteClub = {
+		"id": jsondata['currentClub[id]'], 
+		"clubID": jsondata['currentClub[clubID]'], 
+		"name": jsondata['currentClub[name]'],
+	};
+
+	models.User.findOne({"_id": userid}).exec(saveToFavorites);
+
+	function saveToFavorites(err, user) {
+		if (err) return handleError(err);
+
+		// console.log('favoriteClub');
+		// console.log(favoriteClub);
+
+		user.favorites.push(favoriteClub);
+
+		user.save(function(err){
+			if (err) return handleError(err);
+		}); 
+		//console.log('user:');
+		//console.log(user);
+		res.send();
+	}
+};

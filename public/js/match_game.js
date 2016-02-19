@@ -67,16 +67,20 @@ function noClick(e) {
  */
 function yesClick(e) {
     console.log("Yes clicked");
-    e.preventDefault();	
+    // e.preventDefault();	
+	var id = getParameterByName('auth');
 
-    // get the current club's title
-    var club_title = currentClub['name'];
+	var json = {'userid': id, 'currentClub': currentClub};
 
-    // fill in the title and body of the popup modal
-    $('#yes-modal-label').text('Added ' + club_title + ' to your favorites');
-    // display the modal
+	$.post('/addToFavorites', json);
+
+	var club_title = currentClub['name'];
+
+	// fill in the title and body of the popup modal
+	$('#yes-modal-label').text('Added ' + club_title + ' to your favorites');
+	// display the modal
 	$('#yes-modal').modal();
-	
+
 }
 
 
