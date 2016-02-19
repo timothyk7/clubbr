@@ -50,7 +50,10 @@ function addInterestsHelper(){
 				var checkName = checkboxes[i].value;
 				var del_counter = "#delete-button" + checkboxes[i].id;
 				if(addedInterests.indexOf(del_counter) == -1 ){
-					$('#profile-interests').append('<li>'+ checkName + '<input type="submit" id="delete-button' + checkboxes[i].id + '" class="interests" value="Delete">' +'</li>');
+					var listItem = '<li style="margin: 5px;">'+checkName+
+					'<button id="delete-button'+checkboxes[i].id+
+					'" class="btn btn-xs interests" style="margin-left: 10px;">Delete</button></li>';
+					$('#profile-interests').append(listItem);
 					console.log(del_counter);
 					addedInterests.push(del_counter);
 					$(del_counter).click(deleteInterests);
