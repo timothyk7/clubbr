@@ -9,6 +9,7 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/clubbr.css" rel="stylesheet">
+	<link href="css/profile.css" rel="stylesheet">
     <script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="/js/nav.js"></script>
@@ -33,17 +34,22 @@
 		<!--profile picture and stuff -->
 		<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 profileBlock">
 	        <div class="content clearfix">
-	            <h1 class="center">Create Profile</h1>
+	            <h1 class="center">My Profile</h1>
 	                <div id="userphoto" class="center form-group">
-	                    <img src="/images/wendy.jpeg" class = "profile-pic">
+	                    <img src="/images/avatar.png" class = "profile-pic">
 	                </div>
 	                <div>
 
 	                	<!--<label class="control-label" for="name"> <h2>Wendy Tang</h2></label> -->
-	                	<div id ="profile-name">{{user.name}}</div>
-	                	<button class="btn btn-secondary" id="editName">Edit Name</button>
-	     	            <div id ="profile-email">{{user.email}}</div>
-	                	<button class="btn btn-secondary" id="editEmail" >Edit email</button>
+	                	<div id ="profile-name">
+	                		{{user.name}}
+	                		<button class="btn btn-xs" id="editName">Edit Name</button>
+	                	</div>
+	                	
+	     	            <div id ="profile-email">
+	     	            	{{user.email}}
+	     	            	<button class="btn btn-xs" id="editEmail" >Edit email</button>
+	     	            </div>
 	                </div>
 
 	                <div>
@@ -51,20 +57,21 @@
 	                    	<!-- making a simple list that have interests --> 
 							 <ul id ='profile-interests' class ="profile-interests" style="list-style-type:none">
 							 	{{#each user.interests}}
-							 		<li>{{interest}}<input type="submit" id="delete-button{{id}}" class="interests" value="Delete"></li>
+							 		<li style="margin: 5px;">{{interest}}<button id="delete-button{{id}}" class="btn btn-xs interests" style="margin-left: 10px;">Delete</button></li>
 							 	{{/each}}
 							</ul>  
 	                </div>
+	                <div class="col-xs-12 form-group">
+		                <span>
+		                	<button class="btn btn-primary" id="addInterest" >Add Interests</button> 
+		  
+		                </span>
+		            </div>
 	            </form>
 	        </div><!-- @end #content -->
 	      </div><!-- @end #w -->
 
-	        <div class="col-xs-12 form-group">
-                <span>
-                	<button class="btn btn-primary" id="addInterest" >Add Interests</button> 
-  
-                </span>
-            </div>
+
 
 
 	<!-- Modal Popup for changing your Name-->
