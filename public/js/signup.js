@@ -36,10 +36,6 @@ $(document).ready(function() {
 	  		}
 		}
 
-
-			//console.log(interestArray);
-
-
 			var json = {
 				"name": user,
 				"email": email,
@@ -47,9 +43,6 @@ $(document).ready(function() {
 				"interests": JSON.stringify(interestArray)
 			};
 
-			console.log(json.interests);
-
-			//console.log(json);
 			$.post("/signupsubmit", json,function() {
 				console.log("json sent!");
 			});	
