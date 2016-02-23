@@ -57,7 +57,11 @@
             <button id="show-events-btn" class="club-buttons btn btn-primary btn-lg ">&nbsp&nbspShow events&nbsp&nbsp</button>
         </div>
         <div class="club-buttons">
-            <button id="add-to-favorites-btn" class="club-buttons btn btn-primary btn-lg">Add to favorites</button>
+            {{#if added}}
+              <button id="add-to-favorites-btn" class="club-buttons btn btn-primary btn-lg disabled">Added to Favorites</button>
+            {{else}}
+              <button id="add-to-favorites-btn" class="club-buttons btn btn-primary btn-lg">Add to favorites</button>
+            {{/if}}
         </div>
     </div>
 

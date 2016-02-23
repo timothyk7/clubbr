@@ -2,6 +2,7 @@
 	"clubs": [
 		{
 			"id": 0, 
+			"added": false,
 			"clubID": "composting-club",
 			"name": "Composting Club",
 			"description": "Composting is cool",
@@ -30,6 +31,7 @@
 		},
 		{
 			"id": 1, 
+			"added": false,
 			"clubID": "cycling-club",
 			"name": "Cycling Club",
 			"description": "We like bicycling, bicycling is our passion",
@@ -64,6 +66,7 @@
 		},
 		{
 			"id": 2, 
+			"added": false,
 			"clubID": "reusable-tote-bag-crusaders",
 			"name": "Reusable Tote Bag Crusaders",
 			"description": "Stop wastin plastic!!",
@@ -86,6 +89,7 @@
 		},
 		{
 			"id": 3, 
+			"added": false,
 			"clubID": "save-the-bees",
 			"name": "Save the Bees",
 			"description": "We love bees more than people",
@@ -102,6 +106,7 @@
 		},
 		{
 			"id": 4, 
+			"added": false,
 			"clubID": "extreme-knitting-club",
 			"name": "Extreme Knitting Club",
 			"description": "We're an extremely tight-knit family!",
@@ -131,6 +136,7 @@
 		},
 		{
 			"id": 5, 
+			"added": false,
 			"clubID": "tubbs-fanclub",
 			"name": "Tubbs Fanclub",
 			"description": "Finicky Feaster",

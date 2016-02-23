@@ -47,6 +47,7 @@ function addClick(e) {
 
 		$('#add-to-favorites-btn').addClass('disabled');
 		$('#add-to-favorites-btn').text('Added to Favorites');
+		
 
 	});
 }
