@@ -51,8 +51,6 @@ exports.addFavorite = function(req, res) {
 	function saveToFavorites(err, user) {
 		if (err) return handleError(err);
 
-		// console.log('favoriteClub');
-		// console.log(favoriteClub);
 		var alreadyInFavorites = false;
 
 		for(var i=0; i < user.favorites.length; i++) {
@@ -64,7 +62,8 @@ exports.addFavorite = function(req, res) {
 		
 		if(!alreadyInFavorites) {
 			user.favorites.push(favoriteClub);
-			console.log(user.favorites);
+			var id = favoriteClub['id'];
+			clubs['clubs'][id]['added'] = true;
 		}
 
 		user.save(function(err){
@@ -74,4 +73,6 @@ exports.addFavorite = function(req, res) {
 		//console.log(user);
 		res.send();
 	}
+
+	
 };
