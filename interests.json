@@ -3,44 +3,56 @@
 		{
 			"id": 0, 
 			"interest": "Honey Gathering",
-			"remove_space": "Honey_Gathering"
+			"remove_space": "Honey_Gathering",
+			"display": true
 		},
 		{
 			"id": 1, 
 			"interest": "Composting",
-			"remove_space": "Composting"
+			"remove_space": "Composting",
+			"display": true
 		},
 		{
 			"id": 2, 
 			"interest": "Gardening",
-			"remove_space": "Gardening"
+			"remove_space": "Gardening",
+			"display": true
 		},
 		{
 			"id": 3, 
 			"interest": "Cycling",
-			"remove_space": "Cycling"
+			"remove_space": "Cycling",
+			"display": true 
 		},
 		{
 			"id": 4, 
 			"interest": "Sewing",
-			"remove_space": "Sewing"
+			"remove_space": "Sewing",
+			"display": true
 		},
 		{
 			"id": 5, 
 			"interest": "Knitting",
-			"remove_space": "Knitting"
-		}
-	],
-	"extra_interests":[
+			"remove_space": "Knitting",
+			"display": true
+		},
 		{
 			"id": 6, 
 			"interest": "Pets",
-			"remove_space": "Pets"
+			"remove_space": "Pets",
+			"display": false
 		},
 		{
-			"id": 7, 
-			"interest": "Shopping",
-			"remove_space": "Shopping"
+			"id": 8, 
+			"interest": "Dancing",
+			"remove_space": "Dancing",
+			"display": false
+		},
+		{
+			"id": 9, 
+			"interest": "Cooking",
+			"remove_space": "Cooking",
+			"display": false
 		}
 	]
 }
