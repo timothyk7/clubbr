@@ -62,11 +62,13 @@ app.get('/signup', signup.view);
 app.get('/home', home.view);
 app.get('/orgs', orgs.view);
 app.get('/match_me', match_me.view);
+app.get('/match_me/get-next-club', match_me.clubInfo); //change
 app.get('/profile', profile.view);
 app.get('/clubprofile', clubprofile.view);
-app.get('/match_me/:id', orgs.clubInfo); //change
+app.get('/clubprofile/:id', clubprofile.clubInfo);
 app.get('/favorites', favorites.view);
 
 app.post('/signupsubmit', signup.signup);
 app.post('/addToFavorites', favorites.addFavorite);
-app.post("/authenticate", index.authenticate);
+app.post('/authenticate', index.authenticate);
+app.post('/match_me/no-more', match_me.noMore);

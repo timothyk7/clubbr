@@ -32,8 +32,12 @@ function createView(req, res, userData){
 	var clubID = req.query.id;
 	// var clubID = 0;
   	var clubInfo = clubs['clubs'][clubID]; // of by one, our first project has index 0
-  	console.log(clubInfo);
 	res.render('clubprofile', clubInfo);
+}
+
+exports.clubInfo = function(req, res) {
+    club = clubs['clubs'][req.params.id];
+    res.json(club);
 }
 
 

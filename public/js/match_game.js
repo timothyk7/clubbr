@@ -1,6 +1,5 @@
 'use strict';
 
-var clubCounter = 0;
 var currentClub;
 
 // Call this function when the page loads (the "ready" event)
@@ -14,11 +13,7 @@ $(document).ready(function() {
 function initializePage() {
 	console.log("Javascript connected!");
 
-	// get data for initial club
-	$.get( "/match_me/"+clubCounter, function(result) {
-		currentClub = result;
-	});
-
+	displayNextClub();
 
 	// add listeners to the buttons
 	$("#no-btn").click(noClick);
@@ -31,6 +26,28 @@ function initializePage() {
 }
 
 /*
+ * called to get the info for the next club 
+ */
+function displayNextClub() {
+	// get data for initial club
+	$.get("/match_me/get-next-club", function(result) {
+		currentClub = result;
+
+		// check if currentClub returned as empty object
+		if(Object.keys(currentClub).length == 0) {
+			$("#no-more-modal").modal();
+			$.post("/match_me/no-more", function() {});
+		}
+
+		// fill in the title, description, and image using the json data
+		$("#club-title").text(currentClub['name']);
+	 	$("#club-description").text(currentClub['description']);
+		$("#club-img").attr('src', currentClub['imageURL']);
+		$("#learn-more").text(currentClub['learn-more']);
+	});
+}
+
+/*
  * Listener for when you click the no button
  */
  // commento
@@ -38,27 +55,13 @@ function noClick(e) {
     console.log("No clicked");
     e.preventDefault();	
 
-    clubCounter++;
+    displayNextClub();
 
     // reached end of clubs list
-    if(clubCounter >= 6) {
-    	$("#no-more-modal").modal();
-    	clubCounter = -1;
-    }
-    else {
-    	
-    	// get data for initial club
-		$.get( "/match_me/"+clubCounter, function(result) {
-			currentClub = result;			
-
-			// fill in the title, description, and image using the json data
-			$("#club-title").text(currentClub['name']);
-		 	$("#club-description").text(currentClub['description']);
-			$("#club-img").attr('src', currentClub['imageURL']);
-			$("#learn-more").text(currentClub['learn-more']);
-
-		});
-    }
+    // if(clubCounter >= 6) {
+    // 	$("#no-more-modal").modal();
+    // 	clubCounter = -1;
+    // }
 }
 
 
@@ -93,9 +96,6 @@ function showEventList(e) {
 
 	// hide the currently showing yes-modal
 	$('#yes-modal').modal('hide');
-
-	// get the current club json info and display in modal
-	//$.get("/"+clubCounter, getEventList);	
 
 	// fill in the title of the modal
 	$('#upcoming-events-modal-label').text('Upcoming events for ' + currentClub['name']);
