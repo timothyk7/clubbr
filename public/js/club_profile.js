@@ -16,7 +16,7 @@ function initializePage() {
 	var clubid = getParameterByName('id');
 
 	// get data for initial club
-	$.get( "/match_me/"+clubid, function(result) {
+	$.get( "/clubprofile/"+clubid, function(result) {
 		currentClub = result;
 	});
 
