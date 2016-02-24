@@ -43,7 +43,13 @@ function addInterestsClick(e) {
 function addInterestsHelper(){
 	console.log("addInterestsHelper");
 
+
 	var checkboxes = $("input[type='checkbox']");
+	for (var i=0; i<checkboxes.length; i++)  {
+		if (checkboxes[i].type == 'checkbox')   {
+			checkboxes[i].checked = false;
+		}
+	}
 	console.log(checkboxes.length);
 	for (var i=0; i<checkboxes.length; i++)  {
 			if (checkboxes[i].type == 'checkbox' && checkboxes[i].checked ) {

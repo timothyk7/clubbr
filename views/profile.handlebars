@@ -118,13 +118,15 @@
         		</div>
         		<div class="modal-body">
          			<div id="interest" class="row">
-            			{{#each interests.extra_interests}}
+            			{{#each interests.interests}}
+            				{{#unless user.interest}}
             				<div class="col-md-6 columns center" id="checkBoxInterestsModal"> 
                     			<label class="checkbox-inline" for="{{remove_space}}">
                     			<input type="checkbox" name="Checkboxes" id="{{id}}" value="{{remove_space}}">
                         			{{interest}}
                     			</label> 
             				</div>
+            				{{/unless}}
             			{{/each}}
           			</div>
         		</div>
