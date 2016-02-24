@@ -31,6 +31,7 @@ function authenticate(req, res){
 //change as needed
 function createView(req, res, userData){
 	var userData = userData || {};
+    clubCounter = 0;
 	res.render('match_me', club_data);
 }
 
@@ -50,6 +51,6 @@ exports.clubInfo = function(req, res) {
 
 }
 
-exports.noMore = function(req, res) {
-    clubCounter = 0;
-}
+// exports.noMore = function(req, res) {
+//     clubCounter = 0;
+// }

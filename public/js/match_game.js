@@ -22,7 +22,7 @@ function initializePage() {
 	$("#show-events-btn").click(showEventList);
 	$("#yes-modal-go-to-favorites-btn").click(goToFavorites);
 	$("#no-more-modal-go-to-profile-btn").click(goToProfile);
-	$("#start-again-btn").click(noClick);
+	$("#start-again-btn").click(goToMatchMe);
 }
 
 /*
@@ -36,7 +36,7 @@ function displayNextClub() {
 		// check if currentClub returned as empty object
 		if(Object.keys(currentClub).length == 0) {
 			$("#no-more-modal").modal();
-			$.post("/match_me/no-more", function() {});
+			//$.post("/match_me/no-more", function() {});
 		}
 
 		// fill in the title, description, and image using the json data
@@ -132,6 +132,10 @@ function goToFavorites(e) {
 	window.location.href = '/favorites'+'?auth='+id;
 }
 
+function goToMatchMe(e) {
+	var id = getParameterByName('auth');
+	window.location.href = '/match_me'+'?auth='+id;
+}
 
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
