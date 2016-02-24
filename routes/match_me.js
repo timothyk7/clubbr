@@ -40,11 +40,13 @@ exports.clubInfo = function(req, res) {
     var club = {}
     if(clubCounter < club_data['clubs'].length) {
         club = club_data['clubs'][clubCounter];
+        console.log(club);
+        while(clubCounter < club_data['clubs'].length && club['added']) {
+            clubCounter++;
+            club = club_data['clubs'][clubCounter];
+        }
     }
-    while(club['added']) {
-        clubCounter++;
-        club = club_data['clubs'][clubCounter];
-    }
+
 
     res.json(club);
     clubCounter++;
