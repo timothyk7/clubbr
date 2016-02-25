@@ -33,6 +33,10 @@
 
 /*Home Page*/
 
+#title {
+  font-weight: bold;
+}
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
