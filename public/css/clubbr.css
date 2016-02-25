@@ -69,6 +69,11 @@
   padding: 5px;
 }
 
+.full-width-button {
+  display: block;
+  width: 100%;
+}
+
 .footer{
   position: fixed;
   bottom: 0;
@@ -99,9 +104,9 @@
   overflow: auto;
 }
 
-.match-buttons {
+/*.match-buttons {
   padding-left: 25px;
-}
+}*/
 
 /*Orgs Page*/
 

@@ -1,7 +1,7 @@
 body {
-	background-image: url("../images/oasis.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-image: url("../images/small_steps.png");
+	/*background-repeat: no-repeat;*/
+	/*background-size: cover;*/
 }
 
 html {
