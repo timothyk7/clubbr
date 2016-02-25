@@ -30,11 +30,13 @@ function initializePage() {
  */
 function displayNextClub() {
 	// get data for initial club
-	$.get("/match_me/get-next-club", function(result) {
+	var id = getParameterByName('auth');
+	var user = {'userid': id};
+	$.post("/match_me/get-next-club", user, function(result) {
 		currentClub = result;
 
 		// check if currentClub returned as empty object
-		if(Object.keys(currentClub).length == 0) {
+		if(currentClub['id'] == -1) {
 			$("#no-more-modal").modal();
 			//$.post("/match_me/no-more", function() {});
 		}
@@ -70,6 +72,8 @@ function noClick(e) {
  */
 function yesClick(e) {
     console.log("Yes clicked");
+
+    $(this).addClass('disabled');
     // e.preventDefault();	
 	var id = getParameterByName('auth');
 
