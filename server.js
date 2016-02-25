@@ -71,4 +71,5 @@ app.get('/favorites', favorites.view);
 app.post('/signupsubmit', signup.signup);
 app.post('/addToFavorites', favorites.addFavorite);
 app.post('/authenticate', index.authenticate);
+app.post('/profile/save-changes', profile.saveChanges);
 //app.post('/match_me/no-more', match_me.noMore);
