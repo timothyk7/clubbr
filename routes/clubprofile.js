@@ -32,7 +32,18 @@ function createView(req, res, userData){
 	var clubID = req.query.id;
 	// var clubID = 0;
   	var clubInfo = clubs['clubs'][clubID]; // of by one, our first project has index 0
+
+    var alreadyInFavorites = false;
+    for(var i=0; i < userData.favorites.length; i++) {
+        if ( userData.favorites[i]['id'] == clubInfo['id'] ) {
+            alreadyInFavorites = true;
+            break;
+        }
+    }
+
+    clubInfo['added'] = alreadyInFavorites;
 	res.render('clubprofile', clubInfo);
+
 }
 
 exports.clubInfo = function(req, res) {

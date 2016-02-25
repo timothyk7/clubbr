@@ -54,7 +54,7 @@ exports.addFavorite = function(req, res) {
 		var alreadyInFavorites = false;
 
 		for(var i=0; i < user.favorites.length; i++) {
-		  if (JSON.stringify(user.favorites[i]) === JSON.stringify(favoriteClub) ) {
+		  if ( user.favorites[i]['id'] == favoriteClub['id'] ) {
 		  	alreadyInFavorites = true;
 		  	break;
 		  }
@@ -62,8 +62,6 @@ exports.addFavorite = function(req, res) {
 		
 		if(!alreadyInFavorites) {
 			user.favorites.push(favoriteClub);
-			var id = favoriteClub['id'];
-			clubs['clubs'][id]['added'] = true;
 		}
 
 		user.save(function(err){
