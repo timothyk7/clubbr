@@ -42,12 +42,12 @@
 
 	                	<!--<label class="control-label" for="name"> <h2>Wendy Tang</h2></label> -->
 	                	<div id ="profile-name">
-	                		{{user.name}}
+	                		<span id="pname">{{user.name}}</span>
 	                		<button class="btn btn-xs" id="editName">Edit Name</button>
 	                	</div>
 	                	
 	     	            <div id ="profile-email">
-	     	            	{{user.email}}
+	     	            	<span id="pemail">{{user.email}}</span>
 	     	            	<button class="btn btn-xs" id="editEmail" >Edit email</button>
 	     	            </div>
 	                </div>
@@ -55,16 +55,19 @@
 	                <div>
 	                    <label class="control-label" for="Checkboxes">Interest(s):</label> 
 	                    	<!-- making a simple list that have interests --> 
-							 <ul id ='profile-interests' class ="profile-interests" style="list-style-type:none">
+							 <ul id ="profile-interests" class ="profile-interests" style="list-style-type:none">
 							 	{{#each user.interests}}
-							 		<li style="margin: 5px;">{{interest}}<button id="delete-button{{id}}" class="btn btn-xs interests" style="margin-left: 10px;">Delete</button></li>
+							 		<li style="margin: 5px;">
+							 			<span class="pinterest">{{interest}}</span>
+							 			<button id="delete-button{{id}}" class="btn btn-xs interests" style="margin-left: 10px;">Delete</button>
+							 		</li>
 							 	{{/each}}
 							</ul>  
 	                </div>
 	                <div class="col-xs-12 form-group">
 		                <span>
-		                	<button class="btn btn-primary" id="addInterest" >Add Interests</button> 
-		  
+		                	<button class="btn btn-default" id="addInterest"  style="margin-bottom: 30px;">Add Interests</button> 
+		  					<button class="btn btn-primary btn-lg center" id="saveChanges">Save Changes</button>
 		                </span>
 		            </div>
 	            </form>
@@ -82,7 +85,7 @@
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	      </div>
 	      <div class="modal-body" id="name-modal-body">
-	      	<input type="text" name="new-name" id="new-name">
+	      	<input type="text" name="new-name" id="new-name" placeholder="New Name">
 	      </div>
 	      <div class="modal-footer">
 	      	<button type="button" class="btn btn-default" id="change-name" data-dismiss="modal">Change Name</button>
@@ -99,7 +102,7 @@
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	      </div>
 	      <div class="modal-body" id="name-modal-body">
-	      	<input type="text" name="new-email" id="new-email">
+	      	<input type="text" name="new-email" id="new-email" placeholder="New Email">
 	      </div>
 	      <div class="modal-footer">
 	      	<button type="button" class="btn btn-default" id="change-email" data-dismiss="modal">Change Email</button>
@@ -131,7 +134,7 @@
           			</div>
         		</div>
         		<div class="modal-footer">
-          			<button id="saveChanges" type="button" class="btn btn-primary" data-dismiss="modal">Add to Interest</button>
+          			<button id="saveInterests" type="button" class="btn btn-primary" data-dismiss="modal">Add to Interest</button>
         		</div>
       		</div>
     	</div>
