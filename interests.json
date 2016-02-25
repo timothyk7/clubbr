@@ -53,6 +53,18 @@
 			"interest": "Cooking",
 			"remove_space": "Cooking",
 			"display": false
+		},
+		{
+			"id": 10, 
+			"interest": "Cooking",
+			"remove_space": "Cooking",
+			"display": false
+		},
+		{
+			"id": 11, 
+			"interest": "Reading",
+			"remove_space": "Reading",
+			"display": false
 		}
 	]
 }
