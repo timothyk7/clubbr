@@ -46,6 +46,7 @@ function displayNextClub() {
 	 	$("#club-description").text(currentClub['description']);
 		$("#club-img").attr('src', currentClub['imageURL']);
 		$("#learn-more").text(currentClub['learn-more']);
+		$("#yes-btn").removeClass("disabled");
 	});
 }
 
