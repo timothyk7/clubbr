@@ -58,9 +58,13 @@
         </div>
         <div class="club-buttons">
             {{#if added}}
-              <button id="add-to-favorites-btn" class="club-buttons btn btn-primary btn-lg full-width-button disabled">Added to Favorites</button>
+              <button id="add-to-favorites-btn" class="club-buttons btn btn-primary btn-lg full-width-button disabled">
+                <span class="glyphicon glyphicon-heart"></span>
+              </button>
             {{else}}
-              <button id="add-to-favorites-btn" class="club-buttons btn btn-primary btn-lg full-width-button">Add to favorites</button>
+              <button id="add-to-favorites-btn" class="club-buttons btn btn-primary btn-lg full-width-button">
+                <span class="glyphicon glyphicon-heart-empty"></span>
+              </button>
             {{/if}}
         </div>
     </div>
