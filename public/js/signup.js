@@ -88,7 +88,7 @@ function clearInputs(){
 
 function toggleInterest() {
 	var checkboxes = $("input[type='checkbox']"), submitButt = $("#submitBtn");
-
+ 
 	checkboxes.click(function() {
 		$(this).closest('.checkbox-inline, .checkbox').toggleClass('checked');
 	});
