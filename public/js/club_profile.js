@@ -46,7 +46,7 @@ function addClick(e) {
 		$('#yes-modal').modal();
 
 		$('#add-to-favorites-btn').addClass('disabled');
-		$('#add-to-favorites-btn').text('Added to Favorites');
+		$('#add-to-favorites-btn').html("<span class='glyphicon glyphicon-heart'></span>");
 		
 
 	});
