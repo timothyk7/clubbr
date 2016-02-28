@@ -137,6 +137,72 @@
 		{
 			"id": 5, 
 			"added": false,
+			"clubID": "music-club",
+			"name": "Music Club",
+			"description": "We're the real life version of High School Musical!",
+			"imageURL": "http://cdn.playbuzz.com/cdn/74c9d235-367c-4884-b768-2784142834f2/9768c4c4-649e-4e5d-be1f-02983cf9247f.jpg",
+			"learn-more":"We're a club that really appreciates music. Join us for our events such as singing with Scott Klemmer and Barney the Dinosaur.",
+			"events": [
+				{
+					"title": "Music at ChuckECheese",
+					"time": "Wed, 3/2, 4:00pm",
+					"location": "Peterson Loop",
+					"description": "Join us in enjoying music at ChuckECheese! Rides at Peterson Loop."
+				},
+				{
+					"title": "Charlie Brown Music Lesson",
+					"time": "Thur, 3/3, 7:00pm",
+					"location": "Center 115",
+					"description": "Learn music from the Charlie Brown! Light refreshments provided."
+				}
+
+			]
+		},
+		{
+			"id": 6, 
+			"added": false,
+			"clubID": "tennis-club",
+			"name": "Tennis Club",
+			"description": "We're the UCSD Tennis Club!",
+			"imageURL": "http://www.glastonburytennis.com/assets/A7XvEYBto6Beh3G15soz2D1B.jpeg",
+			"learn-more":"We're a club that supports all forms of tennis, whether competitive or social, we have it all here!",
+			"events": [
+				{
+					"title": "Tennis with SDSU",
+					"time": "Sat, 3/5, 1:00pm",
+					"location": "Muir Tennis Courts",
+					"description": "Join us and SDSU for a day of fun and tennis."
+				},
+				{
+					"title": "Stringing Workshop",
+					"time": "Sun, 3/6, 5:00pm",
+					"location": "Center 213",
+					"description": "We will be learning how to restring our raquets together."
+				}
+
+			]
+		},
+		{
+			"id": 7, 
+			"added": false,
+			"clubID": "cooking-club",
+			"name": "Cooking Club",
+			"description": "Learn some new recipies to spice up your table!",
+			"imageURL": "http://chefwiz.com/wp-content/uploads/2013/11/cooking.jpg",
+			"learn-more":"Ever want to make the pie of your dreams? What about mouth watering chicken? Learn how to make those dishes and more here.",
+			"events": [
+				{
+					"title": "Turkey with Reno Jackson",
+					"time": "Mon, 3/8, 1:00pm",
+					"location": "Warren Student Association Center",
+					"description": "Learn how to create a wonderful Turkey Dish with Reno Jackson to impress your friends and family!."
+				}
+
+			]
+		},
+		{
+			"id": 8, 
+			"added": false,
 			"clubID": "tubbs-fanclub",
 			"name": "Tubbs Fanclub",
 			"description": "Finicky Feaster",
