@@ -51,9 +51,9 @@
                             {{#each interests}}
                               {{#if display}}
                                 <div class="col-md-6 columns center" id="checkBoxInterests"> 
-                                        <label class="checkbox-inline" for="{{remove_space}}">
+                                        <label class="checkbox-inline">
                                         <input type="checkbox" name="Checkboxes" id="{{remove_space}}--{{id}}" value="{{interest}}">
-                                            {{interest}}
+                                            <label for="{{remove_space}}--{{id}}"> {{interest}} </label>
                                         </label> 
                                 </div>
                               {{/if}}
@@ -78,9 +78,9 @@
                               <div id="interest" class="row">
                                 {{#each interests}}
                                 <div class="col-md-6 columns center" id="checkBoxInterestsModal"> 
-                                        <label class="checkbox-inline" for="{{remove_space}}">
+                                        <label class="checkbox-inline">
                                         <input type="checkbox" name="Checkboxes" id="{{remove_space}}-{{id}}" value="{{interest}}">
-                                            {{interest}}
+                                            <label for="{{remove_space}}--{{id}}"> {{interest}} </label>
                                         </label> 
                                 </div>
                                 {{/each}}
@@ -102,10 +102,10 @@
       $('#seeMoreBtn').on('click', function() {
         var interestHtml = '{{#each interests}}' +
                                 '{{#unless display}}' +
-                                '<div class="col-md-6 columns center" id="checkBoxInterestsModal">' + 
-                                        '<label class="checkbox-inline" for="{{remove_space}}">' +
+                                '<div class="col-md-6 columns center" id="checkBoxInterests">' + 
+                                        '<label class="checkbox-inline">' +
                                         '<input type="checkbox" name="Checkboxes" id="{{remove_space}}-{{id}}" value="{{interest}}">' +
-                                            '{{interest}}' +
+                                              '<label for="{{remove_space}}--{{id}}"> {{interest}} </label>' +
                                         '</label>' +
                                 '</div>' +
                                 '{{/unless}}' +

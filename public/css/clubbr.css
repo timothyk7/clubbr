@@ -35,6 +35,12 @@
 
 #title {
   font-weight: bold;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+#slogan {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
 }
 
 .container {
@@ -102,6 +108,10 @@
   margin-left: auto;
   margin-right: auto;
   overflow: auto;
+}
+
+#yes-modal-body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 /*.match-buttons {

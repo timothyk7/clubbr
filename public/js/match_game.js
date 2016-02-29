@@ -59,6 +59,7 @@ function noClick(e) {
     e.preventDefault();	
 
     displayNextClub();
+    $(document).scrollTop(0);
 
     // reached end of clubs list
     // if(clubCounter >= 6) {

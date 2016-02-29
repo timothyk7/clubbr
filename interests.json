@@ -56,14 +56,14 @@
 		},
 		{
 			"id": 10, 
-			"interest": "Cooking",
-			"remove_space": "Cooking",
+			"interest": "Tennis",
+			"remove_space": "Tennis",
 			"display": false
 		},
 		{
 			"id": 11, 
-			"interest": "Reading",
-			"remove_space": "Reading",
+			"interest": "Music",
+			"remove_space": "music",
 			"display": false
 		}
 	]
