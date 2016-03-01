@@ -112,7 +112,7 @@ exports.clubInfo = function(req, res) {
         }
 
 
-        console.log('club: ' + JSON.stringify(club));
+        // console.log('club: ' + JSON.stringify(club));
         res.json(club);
         clubCounter++;
     }
