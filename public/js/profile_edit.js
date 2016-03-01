@@ -86,7 +86,6 @@ function addInterestsHelper(){
 
 	for (var i=0; i<checkboxes.length; i++)  {
 		if (checkboxes[i].type == 'checkbox')   {
-			console.log(checkboxes[i]);
 			checkboxes[i].checked = false;
 			$('#'+checkboxes[i].id).parent().toggleClass('checked', false);
 			
