@@ -27,8 +27,16 @@ function initializePage() {
 	$("#change-email").click(editEmailHelper);
 	$("#saveInterests").click(addInterestsHelper);
 	$("#saveChanges").click(saveChanges);
+	toggleInterest();
 }
 
+function toggleInterest() {
+	var checkboxes = $("input[type='checkbox']");
+
+	checkboxes.click(function() {
+		$(this).closest('.checkbox-inline, .checkbox').toggleClass('checked');
+	});
+}
 
 function editInterestsClick(e) {
     console.log("Edit Interests clicked");
@@ -38,6 +46,18 @@ function editInterestsClick(e) {
 
 function addInterestsClick(e) {
 	console.log("Add Interests clicked");
+
+	var child = $('#interest').children();
+	child.each(function(){
+		$(this).css("display", "inherit");
+	});
+
+	//don't show interest added already
+	for (var i=0; i<addedInterests.length; i++)  {
+		var index = "#delete-button".length; //all interest inside will have delete button as part of id
+		$('#'+addedInterests[i].substring(index)).parent().parent().css("display", "none");
+	}
+
 	$('#interests-modal').modal();
 }
 
@@ -66,7 +86,10 @@ function addInterestsHelper(){
 
 	for (var i=0; i<checkboxes.length; i++)  {
 		if (checkboxes[i].type == 'checkbox')   {
+			console.log(checkboxes[i]);
 			checkboxes[i].checked = false;
+			$('#'+checkboxes[i].id).parent().toggleClass('checked', false);
+			
 		}
 	}
 
@@ -129,7 +152,8 @@ function saveChanges(e) {
 
 	$('.pinterest').each(function( index ) {
 		var id = '#'+$(this).next().attr('id');
-		var index = addedInterests.indexOf(id);
+		var indexid = id.indexOf("--");
+	  	var index = id.substring(indexid+2);
 
 		var result = {}
   		result["id"] = index;

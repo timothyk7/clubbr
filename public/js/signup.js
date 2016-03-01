@@ -62,6 +62,14 @@ $(document).ready(function() {
 		// 	alert("Added to interest");
 		// }
 	});
+
+	$('#seeMoreBtn').on('click', function() {
+		var child = $('#interest').children();
+		child.each(function(){
+			$(this).css("display", "inherit");
+		});
+		$('#seeMoreBtn').hide(); 
+	});
 })
 
 /*
@@ -87,7 +95,7 @@ function clearInputs(){
 }
 
 function toggleInterest() {
-	var checkboxes = $("input[type='checkbox']"), submitButt = $("#submitBtn");
+	var checkboxes = $("input[type='checkbox']");
 
 	checkboxes.click(function() {
 		$(this).closest('.checkbox-inline, .checkbox').toggleClass('checked');

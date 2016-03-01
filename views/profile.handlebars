@@ -59,7 +59,7 @@
 							 	{{#each user.interests}}
 							 		<li style="margin: 5px;">
 							 			<span class="pinterest">{{interest}}</span>
-							 			<button id="delete-button{{id}}" class="btn btn-xs interests" style="margin-left: 10px;">Delete</button>
+							 			<button id="delete-button{{remove_space}}--{{id}}" class="btn btn-xs interests" style="margin-left: 10px;">Delete</button>
 							 		</li>
 							 	{{/each}}
 							</ul>  
@@ -122,14 +122,12 @@
         		<div class="modal-body">
          			<div id="interest" class="row">
             			{{#each interests.interests}}
-            				{{#unless user.interest}}
-            				<div class="col-md-6 columns center" id="checkBoxInterestsModal"> 
-                    			<label class="checkbox-inline" for="{{remove_space}}">
-                    			<input type="checkbox" name="Checkboxes" id="{{id}}" value="{{remove_space}}">
-                        			{{interest}}
-                    			</label> 
-            				</div>
-            				{{/unless}}
+            					<div class="col-md-6 columns center"> 
+                                        <label class="checkbox-inline">
+                                          <input type="checkbox" name="Checkboxes" id="{{remove_space}}--{{id}}" value="{{interest}}">
+                                          <label for="{{remove_space}}--{{id}}"> {{interest}} </label>
+                                        </label> 
+                                </div>
             			{{/each}}
           			</div>
         		</div>
