@@ -171,6 +171,7 @@ function saveChanges(e) {
 
 	console.log(json);
 	$.post('/profile/save-changes', json, function() {
+		alert('Changes saved');
 		window.location.href = '/profile'+'?auth='+id; // reload the page
 	});
 }
