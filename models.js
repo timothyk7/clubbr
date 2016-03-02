@@ -32,6 +32,7 @@ var UserSchema = new Mongoose.Schema({
 	"name": String,
     "email": String,
     "password": String,
+    "displayIcon": Boolean,
     "interests": [InterestSchema],
     "favorites": []
 });

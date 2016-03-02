@@ -47,6 +47,7 @@ function displayNextClub() {
 		$("#club-img").attr('src', currentClub['imageURL']);
 		$("#learn-more").text(currentClub['learn-more']);
 		$("#yes-btn").removeClass("disabled");
+		$("#yes-btn").find("span").attr("class", "glyphicon glyphicon-star-empty");
 	});
 }
 
@@ -75,6 +76,7 @@ function noClick(e) {
 function yesClick(e) {
     console.log("Yes clicked");
 
+    $(this).find("span").attr("class", "glyphicon glyphicon-star");
     $(this).addClass('disabled');
     // e.preventDefault();	
 	var id = getParameterByName('auth');
