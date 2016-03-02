@@ -51,18 +51,38 @@
 
 	<!-- commento -->
 
-	<!-- yes/no buttons -->
+	<!-- buttons -->
 	<div class="footer mid-align">
+		<!-- show events button -->
 		<div class="club-buttons">
 			<button id="show-events-btn" class="club-buttons btn btn-primary btn-lg full-width-button">Show events</button>
 		</div>
+
+		<!-- yes/no star/x buttons -->
 		<div class="club-buttons">
 			<div class="col-xs-6 mid-align" style="padding-left: 0px;">
-				<button id="yes-btn" class="club-buttons btn btn-primary btn-lg full-width-button">Yes</button>
+				<!-- <button id="yes-btn" class="club-buttons btn btn-primary btn-lg full-width-button">Yes</button> -->
+				{{#if displayIcon}}
+					<button type="button" class="btn btn-default btn-lg full-width-button" id="yes-btn" style="font-size: 30px;">
+				  		<span class="glyphicon glyphicon-star-empty" aria-hidden="true" style="color: yellow;"></span> 
+					</button>
+				{{else}}
+					<button type="button" class="btn btn-primary btn-lg full-width-button club-buttons" id="yes-btn" style="font-size: 30px;">
+				  		yes
+					</button>
+				{{/if}}
 			</div>
 
 			<div class="col-xs-6 mid-align" style="padding-right: 0px;">
-			   	<button id="no-btn" class="club-buttons btn btn-primary btn-lg full-width-button">No</button>
+			   	{{#if displayIcon}}
+					<button type="button" class="btn btn-default btn-lg full-width-button" id="no-btn" style="font-size: 30px;">
+				  		<span class="glyphicon glyphicon-remove" aria-hidden="true" style="color: red;"></span> 
+					</button>
+				{{else}}
+					<button type="button" class="btn btn-primary btn-lg full-width-button club-buttons" id="no-btn" style="font-size: 30px;">
+				  		no
+					</button>
+				{{/if}}
 			</div>
 		</div>
 	</div>
@@ -122,5 +142,7 @@
 	  </div>
 	</div>
 
+	{{> googleAnalytics}}
+	
 </body>
 </html>

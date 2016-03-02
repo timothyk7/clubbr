@@ -8,8 +8,6 @@ exports.view = function(req, res){
 exports.signup = function(req, res) {
 	//Adding stuff to query
     var toAdd = req.body;
-    console.log("asd");
-    console.log(toAdd);
 
     //checking if user is part of the DB or not
     var result = {
@@ -17,6 +15,16 @@ exports.signup = function(req, res) {
         "id": -1
     };
 
+    //assign user to either word button layout or icon button layout
+    var random = Math.random();
+    console.log(random);
+    var displayIcon = false;
+
+    if (random >= 0.5) {
+        displayIcon = false;
+    } else {
+        displayIcon = true;
+    }
 
     //console.log(toAdd.interests);
     var existed = false;
@@ -24,8 +32,8 @@ exports.signup = function(req, res) {
             "name": toAdd.name,
             "email": toAdd.email,
             "password": toAdd.password,
-            "interests": JSON.parse(toAdd.interests)
-			
+            "displayIcon": displayIcon,
+            "interests": JSON.parse(toAdd.interests)			
     });
 
     newUser.save(afterSaving);

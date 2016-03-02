@@ -42,6 +42,7 @@ function createView(req, res, userData){
     }
 
     clubInfo['added'] = alreadyInFavorites;
+    clubInfo['displayIcon'] = userData['displayIcon'];
 	res.render('clubprofile', clubInfo);
 
 }

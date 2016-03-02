@@ -1,9 +1,11 @@
 'use strict';
 
 var currentClub;
+var startTime;
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
+	startTime = new Date();
 	initializePage();
 })
 
@@ -47,25 +49,19 @@ function displayNextClub() {
 		$("#club-img").attr('src', currentClub['imageURL']);
 		$("#learn-more").text(currentClub['learn-more']);
 		$("#yes-btn").removeClass("disabled");
+		$("#yes-btn").find("span").attr("class", "glyphicon glyphicon-star-empty");
 	});
 }
 
 /*
  * Listener for when you click the no button
  */
- // commento
 function noClick(e) {
     console.log("No clicked");
     e.preventDefault();	
 
     displayNextClub();
     $(document).scrollTop(0);
-
-    // reached end of clubs list
-    // if(clubCounter >= 6) {
-    // 	$("#no-more-modal").modal();
-    // 	clubCounter = -1;
-    // }
 }
 
 
@@ -73,12 +69,29 @@ function noClick(e) {
  * Makes a modal popup when yes is clicked
  */
 function yesClick(e) {
+	var clickTime = new Date();
+
     console.log("Yes clicked");
 
-    $(this).addClass('disabled');
-    // e.preventDefault();	
-	var id = getParameterByName('auth');
+    // determine which display we are using
+    var display = "text"
+   	if( $(this).text().trim() == "yes" ) {
+   		display = "text";
+   	}
+   	else {
+   		display = "icon";
+   	}
 
+   	var elapsed = clickTime - startTime;
+   	// send click data to google analytics
+   	ga('send', 'event', 'favorite', 'click', display+' (matchme)', elapsed);
+
+   	// turn empty star to filled star, disable button
+    $(this).find("span").attr("class", "glyphicon glyphicon-star");
+    $(this).addClass('disabled');
+
+ 	// send club data and user id to save it into user's favorites
+	var id = getParameterByName('auth');
 	var json = {'userid': id, 'currentClub': currentClub};
 
 	$.post('/addToFavorites', json, function() {

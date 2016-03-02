@@ -1,9 +1,10 @@
 'use strict';
 
 var currentClub;
-
+var startTime;
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
+	startTime = new Date();
 	initializePage();
 })
 
@@ -30,7 +31,22 @@ function initializePage() {
  * Makes a modal popup when yes is clicked
  */
 function addClick(e) {
+	var clickTime = new Date();
     console.log("Add to favorites clicked");
+
+    // determine which display we are using
+    var display = "text"
+   	if( $(this).text().trim() == "" ) {
+   		display = "icon";
+   	}
+   	else {
+   		display = "text";
+   	}
+
+   	var elapsed = clickTime - startTime;
+   	// send click data to google analytics
+   	ga('send', 'event', 'favorite', 'click', display+' (clubprofile)', elapsed);
+
     // e.preventDefault();	
 	var id = getParameterByName('auth');
 
@@ -46,7 +62,7 @@ function addClick(e) {
 		$('#yes-modal').modal();
 
 		$('#add-to-favorites-btn').addClass('disabled');
-		$('#add-to-favorites-btn').text('Added to Favorites');
+		$('#add-to-favorites-btn').find("span").attr("class", "glyphicon glyphicon-star");
 		
 
 	});
