@@ -19,7 +19,7 @@ exports.signup = function(req, res) {
     var existed = false;
     var newUser = new models.User({
             "name": toAdd.name,
-            "email": toAdd.email,
+            "email": toAdd.email.toLowerCase(),
             "password": toAdd.password,
             "interests": JSON.parse(toAdd.interests)			
     });
