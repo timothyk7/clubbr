@@ -19,7 +19,7 @@ function login(e) {
 	if(checkCompleted()){
 		clearBorder();
 		setTimeout(function(){
-			authenticate($("#email").val(), $("#password").val());
+			authenticate($("#email").val().toLowerCase(), $("#password").val());
 		}, 500);	
 	}else{
 		alert("Please enter your email and password");

@@ -19,7 +19,7 @@ exports.signup = function(req, res) {
     var existed = false;
     var newUser = new models.User({
             "name": toAdd.name,
-            "email": toAdd.email,
+            "email": toAdd.email.toLowerCase(),
             "password": toAdd.password,
             "interests": JSON.parse(toAdd.interests)			
     });
@@ -30,8 +30,6 @@ exports.signup = function(req, res) {
    		if(err) console.log(err);
    		res.send("Saved!");
    		console.log("it is done");
-  	}
-
-    
+  	}    
 };
 

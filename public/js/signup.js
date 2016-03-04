@@ -8,9 +8,9 @@ $(document).ready(function() {
 	$('#submitBtn').on('click', function() {
 		if(checkCompleted()){
 			clearBorder();
-			setTimeout(function(){
-				window.location.href = '/home';
-			}, 500);
+			// setTimeout(function(){
+			// 	window.location.href = '/home';
+			// }, 500);
 			var user = $('#name').val();
 			var pass = $('#password').val();
 			var email = $('#email').val();
@@ -45,6 +45,7 @@ $(document).ready(function() {
 
 			$.post("/signupsubmit", json,function() {
 				console.log("json sent!");
+				authenticate(json['email'], json['password']);
 			});	
 		}
         else
@@ -137,4 +138,15 @@ function checkCompleted(){
 	}
 	completed = completed & selected;
 	return completed;
+}
+
+function authenticate(email, password) {
+        $.post("/authenticate?email=" + email + "&password=" + password, function(result) {
+            if (result["verified"]) {
+                window.location.href = '/home?auth='+result['id'];
+            } else {
+                alert("Invalid username and/or password");
+                return;
+            }
+        });
 }
