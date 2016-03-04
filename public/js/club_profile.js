@@ -45,7 +45,7 @@ function addClick(e) {
 
    	var elapsed = clickTime - startTime;
    	// send click data to google analytics
-   	ga('send', 'event', 'favorite', 'click', display+' (clubprofile)', elapsed);
+   	ga('send', 'event', 'favorite', 'click', display+' (clubprofile - ', elapsed);
 
     // e.preventDefault();	
 	var id = getParameterByName('auth');

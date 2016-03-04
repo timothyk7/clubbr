@@ -58,6 +58,7 @@ app.listen(port, function() {
 
 //routes
 app.get('/', index.view);
+app.get('/icon', index.viewIcon)
 app.get('/signup', signup.view);
 app.get('/home', home.view);
 app.get('/orgs', orgs.view);

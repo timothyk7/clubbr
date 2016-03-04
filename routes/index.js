@@ -1,9 +1,15 @@
 var models = require('../models');
+var clubInfo = require('../clubs')
 
 exports.view = function(req, res){
+    clubInfo['displayIcon'] = false;
 	res.render('index');
 }
 
+exports.viewIcon = function(req, res){
+    clubInfo['displayIcon'] = true;
+    res.render('index');
+}
 exports.authenticate = function(req, res){
 	var user = req.query;
     models.User
