@@ -101,7 +101,7 @@ exports.clubInfo = function(req, res) {
                 }
 
             }
-            console.log(clubCounter);
+            // console.log(clubCounter);
         } while (alreadyInFavorites && clubCounter < clubs.length);
 
 
