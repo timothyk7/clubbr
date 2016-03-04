@@ -15,24 +15,12 @@ exports.signup = function(req, res) {
         "id": -1
     };
 
-    //assign user to either word button layout or icon button layout
-    var random = Math.random();
-    console.log(random);
-    var displayIcon = false;
-
-    if (random >= 0.5) {
-        displayIcon = false;
-    } else {
-        displayIcon = true;
-    }
-
     //console.log(toAdd.interests);
     var existed = false;
     var newUser = new models.User({
             "name": toAdd.name,
             "email": toAdd.email,
             "password": toAdd.password,
-            "displayIcon": displayIcon,
             "interests": JSON.parse(toAdd.interests)			
     });
 

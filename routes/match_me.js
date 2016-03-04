@@ -36,9 +36,6 @@ function authenticate(req, res){
 //change as needed
 function createView(req, res, userData){
 	var userData = userData || {};
-    club_data["displayIcon"] = userData["displayIcon"];
-
-    console.log(club_data);
 	res.render('match_me', club_data);
 }
 

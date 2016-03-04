@@ -50,6 +50,8 @@ function displayNextClub() {
 		$("#learn-more").text(currentClub['learn-more']);
 		$("#yes-btn").removeClass("disabled");
 		$("#yes-btn").find("span").attr("class", "glyphicon glyphicon-star-empty");
+		startTime = new Date();
+
 	});
 }
 
