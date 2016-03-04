@@ -6,6 +6,7 @@
 			"clubID": "composting-club",
 			"name": "Composting Club",
 			"description": "Composting is cool",
+			"contact": "composting@gmail.com",
 			"imageURL": "http://www.sandiegocounty.gov/content/dam/sdc/dpw/SOLID_WASTE_PLANNING_and_RECYCLING/Files/compostinghands.jpg",
 			"learn-more": "Composting composting we love composting. This org is free to join. We welcome anyone who enjoys gardening, decomposers, or saving the earth. We have bi-weekly meetings where we discuss composting like what are the best materials to compost, how to customize your compost for each plant, and many other topics.",
 			"events": [
@@ -35,6 +36,7 @@
 			"clubID": "cycling-club",
 			"name": "Cycling Club",
 			"description": "We like bicycling, bicycling is our passion",
+			"contact": "cycling@gmail.com",
 			"imageURL": "http://www.balloons.com.au/Images/LargeImages/peppa_pig_bike_lrg.JPG",
 			"learn-more": "Want a fun way to stay fit? Join the Cycling Club! We have monthly bicycling trips where we all bike together to a fun new destination. We welcome cyclers of all levels, so don't be intimidated!",
 			"events": [
@@ -70,6 +72,7 @@
 			"clubID": "reusable-tote-bag-crusaders",
 			"name": "Reusable Tote Bag Crusaders",
 			"description": "Stop wastin plastic!!",
+			"contact": "reusable@gmail.com",
 			"imageURL": "http://cdn.coolmompicks.com/wp-content/uploads/2014/11/Oh-Kale-Yeah-reusable-grocery-tote-bag.jpg",
 			"learn-more": "Plastic bags are such a waste, and bad for the environment! Get on the tote life! We sell tote bags for cheap, and occasionally give them out for free.",
 			"events": [
@@ -93,6 +96,7 @@
 			"clubID": "save-the-bees",
 			"name": "Save the Bees",
 			"description": "We love bees more than people",
+			"contact": "ilovebees@gmail.com",
 			"imageURL": "http://www.clownsonrounds.com/wp-content/uploads/2015/03/bee-cartoon.png",
 			"learn-more":"Bees are dying and we need to help! We are a volunteering club that aims to raise awareness on this issue, and help protect bees. You'll also learn cool info about bees and beekeeping!",
 			"events": [
@@ -110,6 +114,7 @@
 			"clubID": "extreme-knitting-club",
 			"name": "Extreme Knitting Club",
 			"description": "We're an extremely tight-knit family!",
+			"contact": "knitting@gmail.com",
 			"imageURL": "http://paveseattle.org/wp-content/uploads/2015/08/KnittingBasket.jpg",
 			"learn-more":"We're a knitting club that meets every week. A fee is required for membership, but we provide access to lots of patterns, and free food. Kit with friends while munching on cheese and crackers!",
 			"events": [
@@ -140,6 +145,7 @@
 			"clubID": "music-club",
 			"name": "Music Club",
 			"description": "We're the real life version of High School Musical!",
+			"contact": "music-club@gmail.com",
 			"imageURL": "http://cdn.playbuzz.com/cdn/74c9d235-367c-4884-b768-2784142834f2/9768c4c4-649e-4e5d-be1f-02983cf9247f.jpg",
 			"learn-more":"We're a club that really appreciates music. Join us for our events such as singing with Scott Klemmer and Barney the Dinosaur.",
 			"events": [
@@ -164,6 +170,7 @@
 			"clubID": "tennis-club",
 			"name": "Tennis Club",
 			"description": "We're the UCSD Tennis Club!",
+			"contact": "tennisUCSD@gmail.com",
 			"imageURL": "http://www.glastonburytennis.com/assets/A7XvEYBto6Beh3G15soz2D1B.jpeg",
 			"learn-more":"We're a club that supports all forms of tennis, whether competitive or social, we have it all here!",
 			"events": [
@@ -188,6 +195,7 @@
 			"clubID": "cooking-club",
 			"name": "Cooking Club",
 			"description": "Learn some new recipies to spice up your table!",
+			"contact": "cookingUCSD@gmail.com",
 			"imageURL": "http://chefwiz.com/wp-content/uploads/2013/11/cooking.jpg",
 			"learn-more":"Ever want to make the pie of your dreams? What about mouth watering chicken? Learn how to make those dishes and more here.",
 			"events": [
@@ -206,6 +214,7 @@
 			"clubID": "tubbs-fanclub",
 			"name": "Tubbs Fanclub",
 			"description": "Finicky Feaster",
+			"contact": "lovetubbs@gmail.com",
 			"imageURL": "https://pbs.twimg.com/media/CT_HQpdWcAEn2C0.jpg",
 			"learn-more":"We love Tubbs",
 			"events": [
