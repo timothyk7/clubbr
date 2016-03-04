@@ -48,6 +48,7 @@ function displayNextClub() {
 	 	$("#club-description").text(currentClub['description']);
 		$("#club-img").attr('src', currentClub['imageURL']);
 		$("#learn-more").text(currentClub['learn-more']);
+		$("#contact-info").text("Contact Email: "+currentClub['contact']);
 		$("#yes-btn").removeClass("disabled");
 		$("#yes-btn").find("span").attr("class", "glyphicon glyphicon-star-empty");
 		startTime = new Date();
