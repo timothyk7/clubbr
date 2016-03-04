@@ -30,8 +30,6 @@ exports.signup = function(req, res) {
    		if(err) console.log(err);
    		res.send("Saved!");
    		console.log("it is done");
-  	}
-
-    
+  	}    
 };
 
