@@ -1,6 +1,6 @@
 @font-face{
-  font-family: bebas;
-  src: url(BEBAS___.ttf);
+  font-family: 'bebas';
+  src: url('BEBAS___.ttf');
 }
 
 /*Nav Bar*/
@@ -193,7 +193,6 @@
     float: right;
     padding-top: 200px;
     padding-left: 100px;
-    /* For visibility. Delete me */
 }
 
 #profile-name{
@@ -202,4 +201,8 @@
 
 #profile-email{
   font-size: 200%;
+}
+
+#titleFavorites {
+  font-size: 30px;
 }
