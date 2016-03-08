@@ -8,6 +8,11 @@ html {
 	min-height: 100%;
 }
 
+@font-face{
+  font-family: bebas;
+  src: url(BEBAS___.ttf);
+}
+
 
 /*.user_password {
     width: 50%;
@@ -73,9 +78,8 @@ html {
 }
 .login-title
 {
-    color: #555;
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 48px;
+    font-family: bebas, CenturyGothic, Geneva, AppleGothic, sans-serif;
     display: block;
 }
 .new-account

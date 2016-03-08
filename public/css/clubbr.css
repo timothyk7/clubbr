@@ -1,3 +1,8 @@
+@font-face{
+  font-family: bebas;
+  src: url(BEBAS___.ttf);
+}
+
 /*Nav Bar*/
 .profile-thumbnail {
 	height: 45px;
@@ -27,6 +32,7 @@
 }
 
 
+
 /*#createProfileForm{
 	margin: 25px;
 }*/
@@ -34,12 +40,13 @@
 /*Home Page*/
 
 #title {
-  font-weight: bold;
-  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  font-size: 50px;
+  font-family: bebas, CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
 
 #slogan {
   font-family: "Times New Roman", Times, serif;
+  font-style: italic;
   font-weight: bold;
 }
 
