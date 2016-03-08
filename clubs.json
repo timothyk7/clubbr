@@ -201,7 +201,7 @@
 			"events": [
 				{
 					"title": "Turkey with Reno Jackson",
-					"time": "Mon, 3/8, 1:00pm",
+					"time": "Tue, 3/8, 1:00pm",
 					"location": "Warren Student Association Center",
 					"description": "Learn how to create a wonderful Turkey Dish with Reno Jackson to impress your friends and family!."
 				}
@@ -210,6 +210,139 @@
 		},
 		{
 			"id": 8, 
+			"added": false,
+			"clubID": "agriculture-club",
+			"name": "Agriculture Club",
+			"description": "Become one with agriculture to help the world go round!",
+			"contact": "agricultureUCSD@gmail.com",
+			"imageURL": "http://e360.yale.edu/images/features/california_agriculture_honeybees_onions.jpg",
+			"learn-more":"Want to help and learn about the farming process and animals that make our lives possible? Join today!",
+			"events": [
+				{
+					"title": "Trip to San Diego's Honey Farms",
+					"time": "Mon, 3/14, 1:00pm",
+					"location": "Meet up at Price Center Loop",
+					"description": "Come to San Diego's Honey Farm where we will learn how bees and honey keep the world healthy and sustainable."
+				}
+
+			]
+		},
+		{
+			"id": 9, 
+			"added": false,
+			"clubID": "bike-club",
+			"name": "Bike Club",
+			"description": "Find your perfect bike today! Learn how to build, repair, and find the best bike for your rides.",
+			"contact": "bikeshop@gmail.com",
+			"imageURL": "http://retaildesignblog.net/wp-content/uploads/2013/04/Handsome-Cycle-store-by-KNOCK-Minneapolis.jpg",
+			"learn-more":"Learn what makes a bike, a bike! We dive into the intricies of the best thing since sliced bread, the wheeled contraption known as the bike.",
+			"events": [
+				{
+					"title": "Bike Design Time",
+					"time": "Wednesday, 3/9, 6:00pm",
+					"location": "Warren College Room in Price Center",
+					"description": "Find out what makes a bike look SPICY, we'll visit current and previous trends to figure out what makes your ride slick."
+				}
+
+			]
+		},
+		{
+			"id": 10, 
+			"added": false,
+			"clubID": "crochet-club",
+			"name": "Crochet Club",
+			"description": "Remember your favorite sweater made by your grandma?",
+			"contact": "grandmasCrochet@gmail.com",
+			"imageURL": "http://knittystash.com/wp-content/uploads/2015/12/crochet-hook.jpg",
+			"learn-more":"We remember, and we want to help you make beautiful items through crochet so that you will make someone else very happy.",
+			"events": [
+				{
+					"title": "Crochet Competition",
+					"time": "Friday, 3/11, 3:00pm",
+					"location": "Atkinson 5202",
+					"description": "Come join us in our annual Crochet Competition, where we will crochet our best creation to date. Prizes will be awarded!"
+				}
+
+			]
+		},
+		{
+			"id": 11, 
+			"added": false,
+			"clubID": "animal-appreciation-club",
+			"name": "Animal Appreciation Club",
+			"description": "Animals, humankind's best friends.",
+			"contact": "animalappclub@gmail.com",
+			"imageURL": "http://www.uroubc.ca/wp-content/uploads/2015/07/7030094-cute-animals.jpg",
+			"learn-more":"Here at Animal Appreciation Club we like to take a look at how great animals have made our lives and appreciate them.",
+			"events": [
+				{
+					"title": "Dog Park Quarterlies",
+					"time": "Saturday, 3/12, 12:00pm",
+					"location": "Warren Field",
+					"description": "Each quarter, Animal Appreciation Club will meet up at Warren Field to play with therapy puppies! No cats allowed"
+				}
+
+			]
+		},
+		{
+			"id": 12, 
+			"added": false,
+			"clubID": "ping-pong-club",
+			"name": "Ping Pong Club",
+			"description": "Ping pong, table tennis, GAME ON!",
+			"contact": "pingUCSDpong@gmail.com",
+			"imageURL": "http://www.fhttc.com/images/tourn_2.JPG",
+			"learn-more":"Serve, smash, Win! Here at UCSD Ping Pong Club, we are dedicated to using every muscle in our body to WIN at table tennis.",
+			"events": [
+				{
+					"title": "Gains for Days",
+					"time": "Saturday, 3/12, 1:00pm",
+					"location": "Rimac Weight Room",
+					"description": "Join the Ping Pong club at getting yolked up. We'll teach you our gym menus so you can be bulked up to SMASH DOWN."
+				}
+
+			]
+		},
+		{
+			"id": 13, 
+			"added": false,
+			"clubID": "taste-of-heaven-club",
+			"name": "Taste of Heaven",
+			"description": "Cupcakes, macarons, and pies that taste like bliss.",
+			"contact": "ToH@gmail.com",
+			"imageURL": "http://www.warrencampdesign.com/wcampwebdev/inGodWeTrust/images/tasteOfHeaven.jpg",
+			"learn-more":"Want to make your mouth feel like heaven? Join our club today and enjoy some of the best baked goods you'll ever have.",
+			"events": [
+				{
+					"title": "Tea Time with ToH",
+					"time": "Sunday, 3/13, 10:00am",
+					"location": "Village East Tower, Floor 2",
+					"description": "Join Taste of Heaven for our Finals Week Tea Time! Enjoy fresh baked goods with some rich brewed coffee and meet some angels today."
+				}
+
+			]
+		},
+		{
+			"id": 14, 
+			"added": false,
+			"clubID": "theatre-club",
+			"name": "Theatre Club",
+			"description": "Singing, Dancing, Acting, all in one place. ACTION!",
+			"contact": "theatre@gmail.com",
+			"imageURL": "http://jotter2.files.cache.s3.amazonaws.com/sampled/995/SAMPLED_1801995_300____",
+			"learn-more":"Ever want to be part of your favorite play? Join the theatre club where we will show off our theatrical talents to the world!",
+			"events": [
+				{
+					"title": "Shrek Auditions",
+					"time": "Sunday, 3/13, 11:00am",
+					"location": "Mandeville Auditorium",
+					"description": "Audition for hottest new theatrical stunner: Shrek. We will have auditions to find our perfect green ogre and donkey."
+				}
+
+			]
+		},
+		{
+			"id": 15, 
 			"added": false,
 			"clubID": "tubbs-fanclub",
 			"name": "Tubbs Fanclub",
