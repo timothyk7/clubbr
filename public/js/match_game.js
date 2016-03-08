@@ -43,16 +43,18 @@ function displayNextClub() {
 			//$.post("/match_me/no-more", function() {});
 		}
 
-		// fill in the title, description, and image using the json data
-		$("#club-title").text(currentClub['name']);
-	 	$("#club-description").text(currentClub['description']);
-		$("#club-img").attr('src', currentClub['imageURL']);
-		$("#learn-more").text(currentClub['learn-more']);
-		$("#contact-info").text("Contact Email: "+currentClub['contact']);
-		$("#yes-btn").removeClass("disabled");
-		$("#yes-btn").find("span").attr("class", "glyphicon glyphicon-star-empty");
-		startTime = new Date();
-
+		// basic fix for the undefined error?
+		if(currentClub['id'] != -1) {
+			// fill in the title, description, and image using the json data
+			$("#club-title").text(currentClub['name']);
+		 	$("#club-description").text(currentClub['description']);
+			$("#club-img").attr('src', currentClub['imageURL']);
+			$("#learn-more").text(currentClub['learn-more']);
+			$("#contact-info").text("Contact Email: "+currentClub['contact']);
+			$("#yes-btn").removeClass("disabled");
+			$("#yes-btn").find("span").attr("class", "glyphicon glyphicon-star-empty");
+			startTime = new Date();
+		}
 	});
 }
 
