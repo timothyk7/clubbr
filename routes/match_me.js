@@ -177,7 +177,7 @@ exports.clubInfo = function(req, res) {
 
         var alreadyInFavorites = false;
         var rec = recommend(user);
-        // console.log(rec);
+        console.log(rec);
         do {
             for(var i=0; i < user.favorites.length && clubCounter < clubs.length; i++) {
                 alreadyInFavorites = false;
