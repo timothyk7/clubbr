@@ -58,65 +58,112 @@ function createView(req, res, userData){
  15 - tubbs x
 */
 function recommend(user){
+    var data = {"index": -1,
+                "interest": "" };
     for(var i =0; i<user.interests.length; i++){
         // If the user chooses honey gathering...
         if(user.interests[i]["remove_space"] == "Honey_Gathering" && recId.indexOf(3) != -1){
-            return recId.splice(recId.indexOf(3),1);
+            data["index"] = recId.splice(recId.indexOf(3),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         }else if(user.interests[i]["remove_space"] == "Honey_Gathering" && recId.indexOf(8) != -1){
-            return recId.splice(recId.indexOf(8),1);
+            data["index"] = recId.splice(recId.indexOf(8),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         } // if the user chooses composting...
         else if(user.interests[i]["remove_space"] == "Composting" && recId.indexOf(0) != -1){
-            return recId.splice(recId.indexOf(0),1);
+            data["index"] = recId.splice(recId.indexOf(0),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         }else if(user.interests[i]["remove_space"] == "Composting" && recId.indexOf(8) != -1){
-            return recId.splice(recId.indexOf(8),1);
+            data["index"] = recId.splice(recId.indexOf(8),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         } // if the user chooses gardening
         else if(user.interests[i]["remove_space"] == "Gardening" && recId.indexOf(0) != -1){
-            return recId.splice(recId.indexOf(0),1);
+            data["index"] = recId.splice(recId.indexOf(0),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         }else if(user.interests[i]["remove_space"] == "Gardening" && recId.indexOf(8) != -1){
-            return recId.splice(recId.indexOf(8),1);
+            data["index"] = recId.splice(recId.indexOf(8),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         } // if the user chooses cycling
         else if(user.interests[i]["remove_space"] == "Cycling" && recId.indexOf(1) != -1){
-            return recId.splice(recId.indexOf(1),1);
+            data["index"] = recId.splice(recId.indexOf(1),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         }else if(user.interests[i]["remove_space"] == "Cycling" && recId.indexOf(9) != -1){
-            return recId.splice(recId.indexOf(9),1);
+            data["index"] = recId.splice(recId.indexOf(9),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         } // if the user chooses Sewing
         else if(user.interests[i]["remove_space"] == "Sewing" && recId.indexOf(4) != -1){
-            return recId.splice(recId.indexOf(4),1);
+            data["index"] = recId.splice(recId.indexOf(4),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         }else if(user.interests[i]["remove_space"] == "Sewing" && recId.indexOf(10) != -1){
-            return recId.splice(recId.indexOf(10),1);
+            data["index"] = recId.splice(recId.indexOf(10),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         } // if the user chooses Knitting
         else if(user.interests[i]["remove_space"] == "Knitting" && recId.indexOf(4) != -1){
-            return recId.splice(recId.indexOf(4),1);
+            data["index"] = recId.splice(recId.indexOf(4),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         }else if(user.interests[i]["remove_space"] == "Knitting" && recId.indexOf(10) != -1){
-            return recId.splice(recId.indexOf(10),1);
+            data["index"] = recId.splice(recId.indexOf(10),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         } // if the user chooses Pets
         else if(user.interests[i]["remove_space"] == "Pets" && recId.indexOf(15) != -1){
-            return recId.splice(recId.indexOf(8),1);
+            data["index"] = recId.splice(recId.indexOf(15),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         }else if(user.interests[i]["remove_space"] == "Pets" && recId.indexOf(11) != -1){
-            return recId.splice(recId.indexOf(11),1);
+            data["index"] = recId.splice(recId.indexOf(11),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         } // if the user chooses Dancing
         else if(user.interests[i]["remove_space"] == "Dancing" && recId.indexOf(5) != -1){
-            return recId.splice(recId.indexOf(5),1);
+            data["index"] = recId.splice(recId.indexOf(5),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         }else if(user.interests[i]["remove_space"] == "Dancing" && recId.indexOf(14) != -1){
-            return recId.splice(recId.indexOf(14),1);
+            data["index"] = recId.splice(recId.indexOf(14),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         }// if the user chooses Cooking
         else if(user.interests[i]["remove_space"] == "Cooking" && recId.indexOf(7) != -1){
-            return recId.splice(recId.indexOf(7),1);
+            data["index"] = recId.splice(recId.indexOf(7),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         }else if(user.interests[i]["remove_space"] == "Cooking" && recId.indexOf(13) != -1){
-            return recId.splice(recId.indexOf(13),1);
+            data["index"] = recId.splice(recId.indexOf(13),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         } //if the user chooses Tennis
         else if(user.interests[i]["remove_space"] == "Tennis" && recId.indexOf(6) != -1){
-            return recId.splice(recId.indexOf(6),1);
+            data["index"] = recId.splice(recId.indexOf(6),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         }else if(user.interests[i]["remove_space"] == "Tennis" && recId.indexOf(12) != -1){
-            return recId.splice(recId.indexOf(12),1);
+            data["index"] = recId.splice(recId.indexOf(12),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         } //if the user chooses Music
         else if(user.interests[i]["remove_space"] == "Music" && recId.indexOf(5) != -1){
-            return recId.splice(recId.indexOf(5),1);
+            data["index"] = recId.splice(recId.indexOf(5),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         }else if(user.interests[i]["remove_space"] == "Music" && recId.indexOf(14) != -1){
-            return recId.splice(recId.indexOf(14),1);
+            data["index"] = recId.splice(recId.indexOf(14),1);
+            data["interest"] = user.interests[i]["interest"];
+            return data;
         }
     }
-    return recId.splice(0,1);
+    data["index"] = recId.splice(0,1);
+    return data;
 }
 
 exports.clubInfo = function(req, res) {
@@ -130,6 +177,7 @@ exports.clubInfo = function(req, res) {
 
         var alreadyInFavorites = false;
         var rec = recommend(user);
+        console.log(rec);
         do {
             for(var i=0; i < user.favorites.length && clubCounter < clubs.length; i++) {
                 alreadyInFavorites = false;
@@ -145,15 +193,18 @@ exports.clubInfo = function(req, res) {
         } while (alreadyInFavorites && clubCounter < clubs.length);
 
 
-        var club = {'id': -1}
+        var data = {'club': {"id": -1},
+                    'recommend': "" }
         if(clubCounter < clubs.length) {
             // club = clubs[clubCounter];
-            club = clubs[rec];
+            // console.log(rec);
+            data['club'] = clubs[rec["index"]];
+            data['recommend'] = rec["interest"];
         }
 
 
         // console.log('club: ' + JSON.stringify(club));
-        res.json(club);
+        res.json(data);
         clubCounter++;
     }
 
