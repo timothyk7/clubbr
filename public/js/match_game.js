@@ -13,7 +13,7 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	console.log("Javascript connected!");
+	// console.log("Javascript connected!");
 
 	displayNextClub();
 
@@ -50,7 +50,7 @@ function displayNextClub() {
 		if(currentClub['id'] != -1) {
 			// fill in the title, description, and image using the json data
 			if(result["recommend"] != ""){
-				console.log("enter");
+				// console.log("enter");
 				$("#rec-interest").css({'display': 'block'});
 				$("#rec-interest").text("Based on interest: " + result["recommend"]);
 			}else{
@@ -72,7 +72,7 @@ function displayNextClub() {
  * Listener for when you click the no button
  */
 function noClick(e) {
-    console.log("No clicked");
+    // console.log("No clicked");
     e.preventDefault();	
 
     displayNextClub();
@@ -86,7 +86,7 @@ function noClick(e) {
 function yesClick(e) {
 	var clickTime = new Date();
 
-    console.log("Yes clicked");
+    // console.log("Yes clicked");
 
     // determine which display we are using
     var display = "text"
