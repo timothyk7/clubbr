@@ -91,7 +91,7 @@ function displayNextClub(){
 function getNextClub() {
     var alreadyInFavorites = false;
     var rec = recommend(user);
-    console.log(rec);
+    // console.log(rec);
     do {
         for(var i=0; i < user.favorites.length && clubCounter < clubs.length; i++) {
             alreadyInFavorites = false;
@@ -252,7 +252,7 @@ function recommend(user){
  * Listener for when you click the no button
  */
 function noClick(e) {
-    console.log("No clicked");
+    // console.log("No clicked");
     e.preventDefault();	
     displayNextClub();
     $(document).scrollTop(0);
