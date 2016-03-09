@@ -39,7 +39,10 @@ function displayNextClub() {
 
 		// check if currentClub returned as empty object
 		if(currentClub['id'] == -1) {
-			$("#no-more-modal").modal();
+			$("#no-more-modal").modal({
+    			backdrop: 'static',
+    			keyboard: false
+			});
 			//$.post("/match_me/no-more", function() {});
 		}
 
