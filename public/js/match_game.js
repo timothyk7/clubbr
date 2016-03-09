@@ -35,7 +35,9 @@ function displayNextClub() {
 	var id = getParameterByName('auth');
 	var user = {'userid': id};
 	$.post("/match_me/get-next-club", user, function(result) {
-		currentClub = result["club"];
+		var currentClub = result["club"];
+
+		console.log(currentClub);
 
 		// check if currentClub returned as empty object
 		if(currentClub['id'] == -1) {

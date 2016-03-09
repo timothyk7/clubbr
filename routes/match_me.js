@@ -177,7 +177,7 @@ exports.clubInfo = function(req, res) {
 
         var alreadyInFavorites = false;
         var rec = recommend(user);
-        console.log(rec);
+        // console.log(rec);
         do {
             for(var i=0; i < user.favorites.length && clubCounter < clubs.length; i++) {
                 alreadyInFavorites = false;
@@ -193,7 +193,7 @@ exports.clubInfo = function(req, res) {
         } while (alreadyInFavorites && clubCounter < clubs.length);
 
 
-        var data = {'club': {},
+        var data = {'club': {"id": -1},
                     'recommend': "" }
         if(clubCounter < clubs.length) {
             // club = clubs[clubCounter];
