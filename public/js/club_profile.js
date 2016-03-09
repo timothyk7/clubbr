@@ -31,6 +31,7 @@ function initializePage() {
  * Makes a modal popup when yes is clicked
  */
 function addClick(e) {
+	$(this).prop("disabled",true);
 	var clickTime = new Date();
     console.log("Add to favorites clicked");
 
