@@ -68,7 +68,7 @@ app.get('/clubprofile', clubprofile.view);
 app.get('/clubprofile/:id', clubprofile.clubInfo);
 app.get('/favorites', favorites.view);
 
-app.post('/match_me/get-next-club', match_me.clubInfo);
+app.post('/match_me/get-club', match_me.clubInfo);
 app.post('/signupsubmit', signup.signup);
 app.post('/addToFavorites', favorites.addFavorite);
 app.post('/authenticate', index.authenticate);
