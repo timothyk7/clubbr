@@ -7,6 +7,7 @@ var clubCounter = 0;
 var recId = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
 exports.view = function(req, res){
+    console.log("hi");
     clubCounter = 0;
     recId = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 	authenticate(req, res)
