@@ -35,7 +35,7 @@ function displayNextClub() {
 	var id = getParameterByName('auth');
 	var user = {'userid': id};
 	$.post("/match_me/get-next-club", user, function(result) {
-		var currentClub = result["club"];
+		currentClub = result["club"];
 
 		console.log(currentClub);
 
@@ -109,6 +109,7 @@ function yesClick(e) {
 
  	// send club data and user id to save it into user's favorites
 	var id = getParameterByName('auth');
+	console.log(currentClub);
 	var json = {'userid': id, 'currentClub': currentClub};
 
 	$.post('/addToFavorites', json, function() {
