@@ -35,7 +35,7 @@ function displayNextClub() {
 	var id = getParameterByName('auth');
 	var user = {'userid': id};
 	$.post("/match_me/get-next-club", user, function(result) {
-		currentClub = result;
+		currentClub = result["club"];
 
 		// check if currentClub returned as empty object
 		if(currentClub['id'] == -1) {
@@ -49,6 +49,13 @@ function displayNextClub() {
 		// basic fix for the undefined error?
 		if(currentClub['id'] != -1) {
 			// fill in the title, description, and image using the json data
+			if(result["recommend"] != ""){
+				console.log("enter");
+				$("#rec-interest").css({'display': 'block'});
+				$("#rec-interest").text("Based on interest: " + result["recommend"]);
+			}else{
+				$("#rec-interest").css({'display': 'none'});
+			}
 			$("#club-title").text(currentClub['name']);
 		 	$("#club-description").text(currentClub['description']);
 			$("#club-img").attr('src', currentClub['imageURL']);
