@@ -141,12 +141,13 @@ function checkCompleted(){
 }
 
 function authenticate(email, password) {
-        $.post("/authenticate?email=" + email + "&password=" + password, function(result) {
-            if (result["verified"]) {
-                window.location.href = '/home?auth='+result['id'];
-            } else {
-                alert("Invalid username and/or password");
-                return;
-            }
-        });
+        // $.post("/authenticate?email=" + email + "&password=" + password, function(result) {
+        //     if (result["verified"]) {
+        //         window.location.href = '/home?auth='+result['id'];
+        //     } else {
+        //         alert("Invalid username and/or password");
+        //         return;
+        //     }
+        // });
+	window.location.href = "/";
 }
