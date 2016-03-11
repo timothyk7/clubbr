@@ -34,6 +34,3 @@ To start our application, run the following command:
 ```
 node server.js
 ```
-
-Heroku Site:
-https://young-oasis-22630.herokuapp.com/
